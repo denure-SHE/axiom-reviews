@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Axiom Review — AI Governance & Policy">
+  <style>
+    .hero { padding: clamp(4rem,10vw,7rem) clamp(1.5rem,5vw,5rem) clamp(3rem,6vw,5rem); border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1px 1fr; gap: 4rem; align-items: start; }
+    .hero-divider { background: var(--border); align-self: stretch; }
+    .kicker { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
+    .kicker::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold-dim); }
+    .hero-title { font-family: var(--serif); font-size: clamp(2.8rem,5.5vw,5rem); font-weight: 300; line-height: 1.05; color: var(--text-primary); margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-body { font-size: 1rem; line-height: 1.8; color: var(--text-secondary); max-width: 480px; margin-bottom: 2.5rem; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 10px; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--gold-dim); padding-bottom: 3px; transition: gap 0.2s; }
+    .hero-cta:hover { gap: 16px; }
+    .hero-right { display: flex; flex-direction: column; gap: 1.5rem; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    .hero-stat { border-left: 1px solid var(--border); padding-left: 1.5rem; }
+    .hero-stat .num { font-family: var(--serif); font-size: 3.5rem; font-weight: 300; color: var(--text-primary); line-height: 1; margin-bottom: 0.25rem; }
+    .hero-stat .label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+    .featured-card { background: var(--bg-card); border: 1px solid var(--border); padding: 1.75rem; cursor: pointer; transition: border-color 0.2s; position: relative; overflow: hidden; text-decoration: none; color: inherit; display: block; }
+    .featured-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); }
+    .featured-card:hover { border-color: var(--gold-dim); }
+    .featured-card h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; line-height: 1.25; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .featured-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7; }
+    .card-meta { display: flex; align-items: center; gap: 1rem; margin-top: 1.25rem; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; }
+    .novel-card { background: var(--bg-card); border: 1px solid var(--border); padding: 2rem; cursor: pointer; transition: border-color 0.2s, transform 0.2s; position: relative; text-decoration: none; color: inherit; display: block; }
+    .novel-card:hover { border-color: var(--gold-dim); transform: translateY(-3px); }
+    .novel-spine { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold-dim); }
+    .novel-card .num { font-family: var(--serif); font-size: 5rem; font-weight: 300; color: var(--text-muted); line-height: 1; margin-bottom: 0.5rem; opacity: 0.4; }
+    .novel-card h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; line-height: 1.25; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .novel-card .author { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1rem; }
+    .novel-card p { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.7; }
+    .novel-meta { display: flex; gap: 1.5rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .novels-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .about-strip { background: var(--bg-card); border: 1px solid var(--border); padding: 3.5rem clamp(2rem,6vw,5rem); display: grid; grid-template-columns: 1fr 1px 1fr; gap: 3.5rem; align-items: center; margin: 4rem 0; }
+    .about-divider { background: var(--border); align-self: stretch; }
+    .about-mission h2 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: var(--text-primary); line-height: 1.25; margin-bottom: 1rem; }
+    .about-mission p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8; }
+    .pillar { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+    .pillar-icon { width: 32px; height: 32px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.7rem; color: var(--gold); font-family: var(--serif); margin-top: 2px; }
+    .pillar h4 { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-primary); margin-bottom: 0.25rem; }
+    .pillar p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+    @media(max-width:900px){.hero{grid-template-columns:1fr;gap:2.5rem;}.hero-divider{display:none;}.novels-grid{grid-template-columns:1fr 1fr;}.about-strip{grid-template-columns:1fr;}.about-divider{display:none;}}
+    @media(max-width:600px){.novels-grid{grid-template-columns:1fr;}}
+  </style>
+
+  <!-- HERO -->
+  <div class="container">
+    <div class="hero animate-up">
+      <div>
+        <div class="kicker">AI Governance · Policy · Management</div>
+        <h1 class="hero-title">Where <em>intelligence</em><br>meets accountability</h1>
+        <p class="hero-body">Axiom Review publishes long-form novels and policy analysis at the intersection of artificial intelligence, governance, and modern management theory.</p>
+        <a class="hero-cta" href="/novels">Explore the Review &rarr;</a>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-right">
+        <div class="stats-grid">
+          <div class="hero-stat"><div class="num">12</div><div class="label">Policy papers</div></div>
+          <div class="hero-stat"><div class="num">1</div><div class="label">Serialized novel</div></div>
+          <div class="hero-stat"><div class="num">8</div><div class="label">Chapters published</div></div>
+          <div class="hero-stat"><div class="num">8</div><div class="label">Frameworks reviewed</div></div>
+        </div>
+        <a href="/novels/architecture-of-thinking/introduction" class="featured-card">
+          <span class="card-tag">Featured Novel</span>
+          <h3>The Architecture of Thinking</h3>
+          <p>A leader working at the intersection of technology, risk, and organizational decision-making discovers that the hardest questions about AI are not technical — they are human.</p>
+          <div class="card-meta"><span>Daina Emmanuel</span><span>·</span><span>8 Chapters</span><span>·</span><span>2025</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOVELS -->
+  <div class="container" id="novels">
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Serialized Novels</h2>
+        <a class="section-link" href="/novels">View all →</a>
+      </div>
+      <div class="novels-grid">
+        <a href="/novels/architecture-of-thinking" class="novel-card">
+          <div class="novel-spine"></div>
+          <div class="num">01</div>
+          <div class="author">Daina Emmanuel</div>
+          <h3>The Architecture of Thinking</h3>
+          <p>On Judgment, Machines, and Reasoning. A leader navigating AI risk systems discovers the hardest questions are human, not technical.</p>
+          <div class="novel-meta"><span>8 Chapters</span><span>AI Governance · Management</span></div>
+        </a>
+        <div class="novel-card" style="opacity:0.45;cursor:default;">
+          <div class="novel-spine" style="background:var(--blue-accent);opacity:0.5;"></div>
+          <div class="num">02</div>
+          <div class="author">Coming Soon</div>
+          <h3>Sovereign Signal</h3>
+          <p>Set in 2031 Brussels — a policy analyst discovers three AI governance bodies running on the same foundation model, with diverging fine-tunes.</p>
+          <div class="novel-meta"><span>Forthcoming</span><span>Governance · Policy</span></div>
+        </div>
+        <div class="novel-card" style="opacity:0.45;cursor:default;">
+          <div class="novel-spine" style="background:#7a9e6a;opacity:0.5;"></div>
+          <div class="num">03</div>
+          <div class="author">Coming Soon</div>
+          <h3>The Integration Memo</h3>
+          <p>When a Fortune 100 CHRO mandates AI-assisted performance reviews, a mid-level manager must navigate the human consequences.</p>
+          <div class="novel-meta"><span>Forthcoming</span><span>Integration · HR</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="container" id="about">
+    <div class="about-strip">
+      <div class="about-mission">
+        <h2>A journal built for the AI governance moment</h2>
+        <p>Axiom Review was founded on the belief that the most consequential questions about artificial intelligence are not technical — they are institutional, ethical, and managerial. We publish work that bridges the gap between policy theory and organizational practice.</p>
+      </div>
+      <div class="about-divider"></div>
+      <div>
+        <div class="pillar"><div class="pillar-icon">I</div><div><h4>AI Governance</h4><p>Regulatory frameworks, accountability structures, and the politics of AI oversight.</p></div></div>
+        <div class="pillar"><div class="pillar-icon">II</div><div><h4>Integration Considerations</h4><p>What organizations must think through before, during, and after deploying AI systems.</p></div></div>
+        <div class="pillar"><div class="pillar-icon">III</div><div><h4>Policy Analysis</h4><p>Careful reading of emerging AI policy — from the EU to India to the UN — with implications for practitioners.</p></div></div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

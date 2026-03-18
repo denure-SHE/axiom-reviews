@@ -1,0 +1,14 @@
+---
+const { activePage = '' } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<nav>
+  <a href="/" class="nav-logo">Axiom Review</a>
+  <ul class="nav-links">
+    <li><a href="/novels" class={currentPath.startsWith('/novels') ? 'active' : ''}>Novels</a></li>
+    <li><a href="/policy" class={currentPath.startsWith('/policy') ? 'active' : ''}>Policy & Frameworks</a></li>
+    <li><a href="/#about">About</a></li>
+  </ul>
+  <span class="nav-issue">Vol. I · 2025</span>
+</nav>
