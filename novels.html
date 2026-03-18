@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novels — Axiom Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #181b23;
+    --bg-card: #1e2130;
+    --bg-card-hover: #252838;
+    --border: #2e3140;
+    --border-light: #252838;
+    --gold: #c9a96e;
+    --gold-dim: #8f7549;
+    --text-primary: #ddd9d0;
+    --text-secondary: #9a9890;
+    --text-muted: #6b6860;
+    --blue-accent: #5d8aaa;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 256px;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.6;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(24, 27, 35, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 clamp(1.5rem, 5vw, 5rem);
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-primary);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .nav-logo::before {
+    content: ''; width: 5px; height: 5px;
+    background: var(--gold); border-radius: 50%; display: block;
+  }
+
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-secondary); transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+  .nav-issue {
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 2px;
+  }
+
+  /* ─── PAGE HEADER ─── */
+  .page-header {
+    padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 5vw, 5rem) 3rem;
+    border-bottom: 1px solid var(--border);
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .page-kicker {
+    font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .page-kicker::before {
+    content: ''; width: 24px; height: 1px;
+    background: var(--gold-dim); display: block;
+  }
+
+  .page-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 300; line-height: 1;
+    color: var(--text-primary); letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+
+  .page-desc {
+    font-size: 1rem; color: var(--text-secondary);
+    line-height: 1.8; max-width: 600px;
+  }
+
+  /* ─── NOVELS LIST ─── */
+  .container { padding: 0 clamp(1.5rem, 5vw, 5rem); }
+
+  .novels-section { padding: 4rem 0; }
+
+  .section-label {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--border-light);
+  }
+
+  /* ─── FEATURED NOVEL ─── */
+  .novel-featured {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 3rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: border-color 0.25s, background 0.25s;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: grid;
+  }
+
+  .novel-featured::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .novel-featured:hover {
+    border-color: var(--gold-dim);
+    background: var(--bg-card-hover);
+  }
+
+  /* Book spine visual */
+  .book-cover {
+    background: #0e0f14;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    min-height: 280px;
+  }
+
+  .book-cover::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--gold);
+  }
+
+  .book-num {
+    font-family: var(--serif);
+    font-size: 4rem; font-weight: 300;
+    color: var(--text-muted); opacity: 0.2;
+    line-height: 1;
+  }
+
+  .book-cover-title {
+    font-family: var(--serif);
+    font-size: 1.1rem; font-weight: 400;
+    color: var(--text-primary); line-height: 1.3;
+    writing-mode: horizontal-tb;
+  }
+
+  .book-cover-author {
+    font-size: 0.65rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold-dim);
+  }
+
+  .novel-detail { display: flex; flex-direction: column; justify-content: center; gap: 1rem; }
+
+  .novel-status {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.25rem;
+  }
+  .novel-status::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--gold); border-radius: 50%;
+    display: block; animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .novel-detail h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--text-primary); letter-spacing: -0.01em;
+  }
+
+  .novel-detail .subtitle {
+    font-family: var(--serif);
+    font-style: italic; font-size: 1.1rem;
+    color: var(--gold); line-height: 1.4;
+  }
+
+  .novel-detail p {
+    font-size: 0.9rem; color: var(--text-secondary);
+    line-height: 1.8; max-width: 520px;
+  }
+
+  .novel-stats {
+    display: flex; gap: 2rem; margin-top: 0.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat { }
+  .stat .num {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 300;
+    color: var(--text-primary); line-height: 1;
+    display: block; margin-bottom: 2px;
+  }
+  .stat .lbl {
+    font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .read-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 3px;
+    transition: gap 0.2s;
+    margin-top: 0.5rem;
+    width: fit-content;
+  }
+  .novel-featured:hover .read-cta { gap: 16px; }
+
+  /* ─── COMING SOON NOVELS ─── */
+  .coming-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .coming-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    opacity: 0.5;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .coming-card::after {
+    content: 'Forthcoming';
+    position: absolute; top: 1rem; right: 1rem;
+    font-size: 0.55rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 2px 7px; border-radius: 1px;
+  }
+
+  .coming-spine {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px;
+  }
+
+  .coming-card .num {
+    font-family: var(--serif); font-size: 4rem; font-weight: 300;
+    color: var(--text-muted); opacity: 0.2; line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .coming-card h3 {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+    color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.25;
+  }
+
+  .coming-card .author {
+    font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 0.75rem;
+  }
+
+  .coming-card p {
+    font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7;
+  }
+
+  /* ─── ABOUT NOVELS ─── */
+  .about-novels {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    padding: 2.5rem 3rem;
+    margin: 4rem 0;
+    display: flex; align-items: start; gap: 3rem;
+  }
+
+  .about-novels-icon {
+    font-family: var(--serif);
+    font-size: 4rem; font-weight: 300;
+    color: var(--gold-dim); opacity: 0.4;
+    line-height: 1; flex-shrink: 0;
+  }
+
+  .about-novels h3 {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+    color: var(--text-primary); margin-bottom: 0.75rem;
+  }
+
+  .about-novels p {
+    font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;
+    max-width: 580px;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem clamp(1.5rem, 5vw, 5rem);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: var(--serif); font-size: 1rem; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--text-primary);
+    display: flex; align-items: center; gap: 7px;
+  }
+  .footer-logo::before {
+    content: ''; width: 4px; height: 4px;
+    background: var(--gold); border-radius: 50%; display: block;
+  }
+
+  .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+  .footer-links a {
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-muted); transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ─── ANIM ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 860px) {
+    .novel-featured { grid-template-columns: 1fr; }
+    .book-cover { min-height: 140px; flex-direction: row; align-items: center; }
+    .book-num { font-size: 2.5rem; }
+    .coming-soon-grid { grid-template-columns: 1fr 1fr; }
+    .about-novels { flex-direction: column; gap: 1.5rem; }
+  }
+
+  @media (max-width: 600px) {
+    .coming-soon-grid { grid-template-columns: 1fr; }
+    nav .nav-links { display: none; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Axiom Review</a>
+  <ul class="nav-links">
+    <li><a href="novels.html" class="active">Novels</a></li>
+    <li><a href="index.html#vlogs">Vlogs</a></li>
+    <li><a href="index.html#policy">Policy & Frameworks</a></li>
+    <li><a href="index.html#about">About</a></li>
+  </ul>
+  <span class="nav-issue">Vol. I · 2025</span>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-kicker">Long-form Fiction</div>
+  <h1 class="page-title">Serialized Novels</h1>
+  <p class="page-desc">Fiction at the intersection of AI governance, management, and the human systems behind institutional decision-making. Published in chapters as they are written.</p>
+</div>
+
+<div class="container">
+
+  <!-- ACTIVE NOVELS -->
+  <div class="novels-section">
+    <div class="section-label">Now Publishing</div>
+
+    <a href="architecture-of-thinking.html" class="novel-featured">
+      <div class="book-cover" style="background:none;border:none;padding:0;min-height:unset;justify-content:center;">
+        <img src="architecture-cover.png" alt="The Architecture of Thinking" style="width:160px;display:block;box-shadow:10px 10px 0 rgba(0,0,0,0.5);">
+      </div>
+
+      <div class="novel-detail">
+        <div class="novel-status">Actively Publishing</div>
+        <h2>The Architecture of Thinking</h2>
+        <div class="subtitle">On Judgment, Machines, and Reasoning</div>
+        <p>A leader navigating the intersection of technology, risk, and organizational decision-making discovers that the hardest questions about intelligent systems are not technical — they are institutional, ethical, and deeply human. Told in parallel across the boardroom and the kitchen table.</p>
+
+        <div class="novel-stats">
+          <div class="stat">
+            <span class="num">8</span>
+            <span class="lbl">Chapters published</span>
+          </div>
+          <div class="stat">
+            <span class="num">~150</span>
+            <span class="lbl">Min total reading</span>
+          </div>
+          <div class="stat">
+            <span class="num">2025</span>
+            <span class="lbl">Series begun</span>
+          </div>
+        </div>
+
+        <div class="read-cta">Begin reading &rarr;</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- COMING SOON -->
+  <div class="novels-section" style="padding-top:0;">
+    <div class="section-label">Forthcoming</div>
+
+    <div class="coming-soon-grid">
+      <div class="coming-card">
+        <div class="coming-spine" style="background: var(--blue-accent);"></div>
+        <div class="num">02</div>
+        <div class="author">Coming Soon</div>
+        <h3>Sovereign Signal</h3>
+        <p>Set in 2031 Brussels, a policy analyst discovers that three major AI governance bodies are unknowingly running on the same foundation model — with diverging fine-tunes.</p>
+      </div>
+
+      <div class="coming-card">
+        <div class="coming-spine" style="background: #7a9e6a;"></div>
+        <div class="num">03</div>
+        <div class="author">Coming Soon</div>
+        <h3>The Integration Memo</h3>
+        <p>When a Fortune 100 CHRO mandates AI-assisted performance reviews, a mid-level manager must navigate the human and institutional consequences.</p>
+      </div>
+
+      <div class="coming-card">
+        <div class="coming-spine" style="background: #a07cba;"></div>
+        <div class="num">04</div>
+        <div class="author">Open</div>
+        <h3>Your Novel Here</h3>
+        <p>Axiom Review publishes long-form fiction on AI governance, management, and organizational systems. Submissions open.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="about-novels">
+    <div class="about-novels-icon">¶</div>
+    <div>
+      <h3>About the Novels Programme</h3>
+      <p>Axiom Review commissions and publishes serialized literary fiction that takes AI governance and organizational management seriously as subject matter — not as backdrop, but as the central drama. We believe fiction can explore the ethical, institutional, and human consequences of intelligent systems in ways that policy analysis alone cannot. Chapters are published as they are completed.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Axiom Review</div>
+  <ul class="footer-links">
+    <li><a href="novels.html">Novels</a></li>
+    <li><a href="index.html#vlogs">Vlogs</a></li>
+    <li><a href="index.html#policy">Policy</a></li>
+    <li><a href="index.html#about">About</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

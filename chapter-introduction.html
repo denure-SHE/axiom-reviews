@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction — The Architecture of Thinking · Axiom Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0b0c10;
+    --bg-card: #13141a;
+    --bg-card-hover: #191b22;
+    --border: #26272e;
+    --border-light: #1e1f26;
+    --gold: #c9a96e;
+    --gold-dim: #8f7549;
+    --gold-faint: rgba(201, 169, 110, 0.08);
+    --text-primary: #e4e0d8;
+    --text-secondary: #7e7c78;
+    --text-muted: #4a4844;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
+    --reading-width: 660px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 256px;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.6;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 12, 16, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-logo::before {
+    content: '';
+    display: block;
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .nav-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .nav-breadcrumb span { color: var(--text-muted); }
+  .nav-breadcrumb .current { color: var(--text-secondary); }
+  .nav-breadcrumb .sep { color: var(--border); }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .reading-time {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* ─── PROGRESS BAR ─── */
+  .progress-bar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 2px;
+    background: var(--gold);
+    width: 0%;
+    z-index: 99;
+    transition: width 0.1s linear;
+  }
+
+  /* ─── CHAPTER HERO ─── */
+  .chapter-hero {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 3rem) 0;
+    position: relative;
+  }
+
+  .novel-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .novel-tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold-dim);
+    padding: 4px 10px;
+    border-radius: 1px;
+  }
+
+  .novel-title-ref {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .chapter-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .chapter-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold-dim);
+  }
+
+  .chapter-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+
+  .chapter-subtitle {
+    font-family: var(--serif);
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 2.5rem;
+    line-height: 1.3;
+  }
+
+  .chapter-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+  }
+
+  .author-block {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .author-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    letter-spacing: 0.04em;
+  }
+
+  .author-role {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .meta-divider {
+    width: 1px;
+    height: 28px;
+    background: var(--border);
+  }
+
+  .meta-item {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .meta-item strong {
+    display: block;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  /* ─── DECORATIVE RULE ─── */
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3.5rem 0 3rem;
+    max-width: var(--reading-width);
+    margin: 0 auto;
+  }
+
+  .ornament-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .ornament-diamond {
+    width: 6px;
+    height: 6px;
+    background: var(--gold-dim);
+    transform: rotate(45deg);
+  }
+
+  /* ─── BODY COPY ─── */
+  .reading-body {
+    max-width: var(--reading-width);
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 0rem);
+  }
+
+  /* Drop cap on first paragraph */
+  .reading-body > p:first-of-type::first-letter {
+    font-family: var(--serif);
+    font-size: 5.2rem;
+    font-weight: 400;
+    float: left;
+    line-height: 0.78;
+    margin-right: 0.12em;
+    margin-top: 0.1em;
+    color: var(--gold);
+  }
+
+  .reading-body p {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2vw, 1.3rem);
+    line-height: 2;
+    color: #ede9e1;
+    margin-bottom: 1.75em;
+    font-weight: 400;
+    letter-spacing: 0.012em;
+  }
+
+  /* Standalone dramatic lines */
+  .reading-body p.standalone {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+    font-style: italic;
+    color: var(--gold);
+    border-left: 2px solid var(--gold-dim);
+    padding-left: 1.5rem;
+    margin: 2.5em 0;
+    line-height: 1.6;
+  }
+
+  /* Central questions block */
+  .questions-block {
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    padding: 2.5rem 2.5rem 2rem;
+    margin: 2.5em 0;
+    position: relative;
+  }
+
+  .questions-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold-dim), transparent);
+  }
+
+  .questions-block p {
+    font-family: var(--serif);
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 0.75em;
+    border-left: none;
+    padding-left: 0;
+    line-height: 1.7;
+  }
+
+  .questions-block p:last-child { margin-bottom: 0; }
+
+  .questions-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+
+  /* ─── CHAPTER END ─── */
+  .chapter-end {
+    max-width: var(--reading-width);
+    margin: 0 auto;
+    padding: 4rem clamp(1.5rem, 5vw, 0rem) 5rem;
+  }
+
+  .end-ornament {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .end-ornament-line { flex: 1; height: 1px; background: var(--border); }
+
+  .end-ornament-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .end-ornament-dots span {
+    width: 4px; height: 4px;
+    background: var(--gold-dim);
+    border-radius: 50%;
+    display: block;
+  }
+
+  .chapter-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .chapter-nav-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .chapter-nav-card:hover {
+    border-color: var(--gold-dim);
+    background: var(--bg-card-hover);
+  }
+
+  .chapter-nav-card.next { align-items: flex-end; text-align: right; }
+
+  .nav-dir {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .nav-chapter-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+
+  /* ─── SIDEBAR ─── */
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 80px;
+    padding: 4rem 0 4rem 3rem;
+    border-left: 1px solid var(--border-light);
+  }
+
+  .sidebar-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .sidebar-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .sidebar-novel-title {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+  }
+
+  .sidebar-novel-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  .sidebar-toc {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sidebar-toc li a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-light);
+    transition: color 0.2s;
+  }
+
+  .sidebar-toc li a:hover { color: var(--gold); }
+
+  .sidebar-toc li.active a {
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  .toc-num {
+    font-family: var(--serif);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    min-width: 16px;
+  }
+
+  .sidebar-toc li.active .toc-num { color: var(--gold-dim); }
+
+  .share-links {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .share-btn {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    border-radius: 1px;
+    background: transparent;
+    font-family: var(--sans);
+  }
+
+  .share-btn:hover { color: var(--gold); border-color: var(--gold-dim); }
+
+  /* ─── MAIN CONTENT AREA ─── */
+  .main-content {
+    padding-bottom: 6rem;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .chapter-hero { animation: fadeUp 0.7s ease forwards; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 960px) {
+    .page-wrapper { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .chapter-title { letter-spacing: -0.01em; }
+    .chapter-nav { grid-template-columns: 1fr; }
+    .chapter-meta-row { flex-wrap: wrap; gap: 1rem; }
+    .meta-divider { display: none; }
+    nav .nav-breadcrumb { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Axiom Review</a>
+  <div class="nav-breadcrumb">
+    <a href="novels.html"><span>Novels</span></a>
+    <span class="sep">/</span>
+    <a href="architecture-of-thinking.html"><span>The Architecture of Thinking</span></a>
+    <span class="sep">/</span>
+    <span class="current">Introduction</span>
+  </div>
+  <div class="nav-right">
+    <span class="reading-time">8 min read</span>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <!-- CHAPTER HERO -->
+    <div class="chapter-hero">
+      <div class="novel-label">
+        <span class="novel-tag">Novel</span>
+        <span class="novel-title-ref">The Architecture of Thinking</span>
+      </div>
+      <div class="chapter-label">Introduction</div>
+      <h1 class="chapter-title">Introduction</h1>
+      <div class="chapter-subtitle">On Judgment, Machines, and Reasoning</div>
+
+      <div class="chapter-meta-row">
+        <div class="meta-item">
+          <strong>Published</strong>
+          March 2025
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <strong>Novel</strong>
+          The Architecture of Thinking
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <strong>Topic</strong>
+          AI Governance · Management
+        </div>
+      </div>
+    </div>
+
+    <!-- ORNAMENT -->
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line"></div>
+    </div>
+
+    <!-- BODY -->
+    <div class="reading-body">
+
+      <p>Organizations today run on systems. Some are visible—models, dashboards, policies, workflows. Others are quieter but just as powerful: habits of reasoning, patterns of trust, and the invisible order in which people think before they decide.</p>
+
+      <p>For a long time, these systems were almost entirely human. Data informed them, but judgment carried them forward. Decisions moved through people—through investigation, conversation, interpretation, and finally action.</p>
+
+      <p class="standalone">Today something new sits inside that chain.</p>
+
+      <p>Intelligent systems can observe patterns, generate explanations, and influence decisions faster than the organizations that deploy them. They promise clarity, scale, and efficiency. But they also introduce a deeper question that many institutions are only beginning to confront:</p>
+
+      <p class="standalone">Who governs the reasoning of the systems we build?</p>
+
+      <p>This book is a story about that question.</p>
+
+      <p>At its center is Ananya, a leader working at the intersection of technology, risk, and organizational decision-making. When her team begins building a new generation of risk intelligence systems—systems designed to detect patterns earlier than traditional models—the work appears technical at first. It is about signals, probabilities, architectures, and decision frameworks.</p>
+
+      <p>But leadership rarely stays technical for long.</p>
+
+      <p>Ideas encounter resistance. Ownership becomes political. Systems designed to assist human reasoning begin to shape how reasoning itself unfolds. And success, when it arrives, brings its own pressures—visibility, expectations, and the quiet temptation to simplify what once required discipline.</p>
+
+      <p>Yet the story does not unfold only in conference rooms and architecture diagrams.</p>
+
+      <p>At home, Ananya inhabits another world—one that runs on a different rhythm. Here there are no dashboards measuring uncertainty, no escalation protocols, no strategic briefings. There are conversations at the dinner table, school projects scattered across the floor, and the small negotiations that define everyday family life.</p>
+
+      <p>And slowly, a quiet realization emerges.</p>
+
+      <p>The same questions she faces at work echo in the most ordinary moments at home.</p>
+
+      <div class="questions-block">
+        <span class="questions-label">The central questions</span>
+        <p>When should you intervene, and when should you step back?</p>
+        <p>How do you build something strong enough to stand on its own?</p>
+        <p>What does leadership look like when the goal is not control, but trust?</p>
+      </div>
+
+      <p>In the office, Ananya learns to design systems that allow teams to think clearly under uncertainty. At home, she learns that clarity sometimes comes from letting others try, fail, and grow without interference. The boundaries between the two worlds begin to blur—not in conflict, but in insight.</p>
+
+      <p>The patience learned in parenting reshapes how she leads. The discipline required in building responsible systems reshapes how she approaches family decisions. Both worlds quietly refine the same skill: judgment.</p>
+
+      <p>As the system her team built begins to scale across the organization, something unexpected begins to happen. The system does not fail dramatically. Instead, it begins to drift in subtle ways. Explanations appear before investigations. Narratives start shaping how signals are interpreted. The order of reasoning that once anchored the system begins to shift.</p>
+
+      <p>The investigation that follows reveals a lesson that reaches far beyond technology.</p>
+
+      <p class="standalone">Complex systems rarely break all at once. More often, they evolve quietly until the sequence of thinking that once held them together changes.</p>
+
+      <p>Restoring that sequence—the architecture of thinking—is ultimately the deeper work of leadership.</p>
+
+      <p>This novel is about that journey: building systems, building institutions, and learning how judgment—shaped equally by the worlds of work and home—can guide both.</p>
+
+    </div>
+
+    <!-- CHAPTER END -->
+    <div class="chapter-end">
+      <div class="end-ornament">
+        <div class="end-ornament-line"></div>
+        <div class="end-ornament-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="end-ornament-line"></div>
+      </div>
+
+      <div class="chapter-nav">
+        <div class="chapter-nav-card prev" style="opacity: 0.3; cursor: default; pointer-events: none;">
+          <span class="nav-dir">← Previous</span>
+          <span class="nav-chapter-title" style="color: var(--text-muted);">No previous chapter</span>
+        </div>
+        <div class="chapter-nav-card next" onclick="window.location='chapter-one.html'" style="cursor:pointer;">
+          <span class="nav-dir">Next Chapter →</span>
+          <span class="nav-chapter-title">Chapter One</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">This Novel</span>
+      <div class="sidebar-novel-title">The Architecture of Thinking</div>
+      <div class="sidebar-novel-sub">On Judgment, Machines, and Reasoning</div>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Contents</span>
+      <ul class="sidebar-toc">
+        <li class="active">
+          <a href="#">
+            <span class="toc-num">—</span>
+            Introduction
+          </a>
+        </li>
+        <li>
+          <a href="chapter-one.html">
+            <span class="toc-num">01</span>
+            The Pattern Beneath the Noise
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="toc-num">02</span>
+            Chapter Two
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="toc-num">03</span>
+            Chapter Three
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Novel</span>
+      <a href="architecture-of-thinking.html" style="font-size:0.82rem; color:var(--gold); text-decoration:none; border-bottom: 1px solid var(--gold-dim); padding-bottom:2px;">← Back to novel page</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Share</span>
+      <div class="share-links">
+        <button class="share-btn" onclick="copyLink()">Copy link</button>
+        <button class="share-btn">X / Twitter</button>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrolled = doc.scrollTop || document.body.scrollTop;
+    const total = doc.scrollHeight - doc.clientHeight;
+    const pct = total > 0 ? (scrolled / total) * 100 : 0;
+    document.getElementById('progressBar').style.width = pct + '%';
+  });
+
+  // Copy link
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = event.target;
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = 'Copy link', 1500);
+    });
+  }
+</script>
+
+</body>
+</html>

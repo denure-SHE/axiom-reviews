@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Axiom Review — AI Governance & Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #181b23;
+    --bg-card: #1e2130;
+    --bg-card-hover: #252838;
+    --border: #2e3140;
+    --border-light: #252838;
+    --gold: #c9a96e;
+    --gold-dim: #8f7549;
+    --text-primary: #ddd9d0;
+    --text-secondary: #9a9890;
+    --text-muted: #6b6860;
+    --blue-accent: #5d8aaa;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 256px;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.6;
+  }
+
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(24, 27, 35, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 clamp(1.5rem, 5vw, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-logo::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-issue {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 5rem) clamp(3rem, 6vw, 5rem);
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .hero-divider {
+    background: var(--border);
+    align-self: stretch;
+  }
+
+  .hero-left .kicker {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-left .kicker::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold-dim);
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 3px;
+    transition: gap 0.2s;
+    cursor: pointer;
+  }
+
+  .hero-cta:hover { gap: 16px; }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-stat {
+    border-left: 1px solid var(--border);
+    padding-left: 1.5rem;
+  }
+
+  .hero-stat .num {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-stat .label {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .hero-featured-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1.75rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-featured-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .hero-featured-card:hover {
+    border-color: var(--gold-dim);
+    background: var(--bg-card-hover);
+  }
+
+  .card-tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold-dim);
+    padding: 3px 8px;
+    border-radius: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .card-tag.policy { color: var(--blue-accent); border-color: #2d4d60; }
+  .card-tag.vlog { color: #a07cba; border-color: #3d2d4f; }
+  .card-tag.novel { color: #7a9e6a; border-color: #2d4028; }
+
+  .hero-featured-card h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  .hero-featured-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .card-meta span { display: flex; align-items: center; gap: 5px; }
+
+  /* ─── SECTION HEADER ─── */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold-dim);
+  }
+
+  .section-link {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+
+  .section-link:hover { color: var(--gold); }
+
+  /* ─── MAIN LAYOUT ─── */
+  .container {
+    padding: 0 clamp(1.5rem, 5vw, 5rem);
+  }
+
+  section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
+
+  /* ─── LATEST GRID ─── */
+  .latest-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+  }
+
+  .latest-main {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .latest-main:hover { background: var(--bg-card-hover); }
+
+  .latest-main h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 1rem 0;
+    color: var(--text-primary);
+  }
+
+  .latest-main p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    max-width: 480px;
+  }
+
+  .latest-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .side-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    flex: 1;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-left: none;
+  }
+
+  .side-card:hover { background: var(--bg-card-hover); }
+
+  .side-card h4 {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0.5rem 0 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .side-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  /* ─── NOVELS ─── */
+  .novels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .novel-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+  }
+
+  .novel-card:hover {
+    border-color: var(--gold-dim);
+    transform: translateY(-3px);
+  }
+
+  .novel-spine {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--gold-dim);
+  }
+
+  .novel-card .num {
+    font-family: var(--serif);
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    opacity: 0.4;
+  }
+
+  .novel-card h3 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .novel-card .author {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 1rem;
+  }
+
+  .novel-card p {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .novel-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* ─── VLOGS ─── */
+  .vlogs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .vlog-card {
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .vlog-card:hover { opacity: 0.85; }
+
+  .vlog-thumb {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .vlog-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #1a1c24 0%, #0c0e14 100%);
+  }
+
+  .vlog-thumb-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vlog-thumb-bg-1 { background: radial-gradient(circle at 30% 50%, #1e2535 0%, transparent 70%), radial-gradient(circle at 80% 20%, #151a28 0%, transparent 60%); }
+  .vlog-thumb-bg-2 { background: radial-gradient(circle at 70% 60%, #1c2030 0%, transparent 65%), radial-gradient(circle at 20% 30%, #17191f 0%, transparent 55%); }
+  .vlog-thumb-bg-3 { background: radial-gradient(circle at 50% 30%, #1a2030 0%, transparent 60%), radial-gradient(circle at 75% 75%, #151820 0%, transparent 65%); }
+
+  .play-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(201, 169, 110, 0.15);
+    border: 1px solid var(--gold-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+  }
+
+  .play-btn svg { margin-left: 3px; }
+
+  .vlog-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    z-index: 2;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    background: rgba(11, 12, 16, 0.7);
+    padding: 2px 6px;
+  }
+
+  .vlog-card h4 {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .vlog-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  /* ─── POLICY ─── */
+  .policy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+
+  .policy-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: start;
+    gap: 2rem;
+    padding: 1.75rem 2rem;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .policy-item:last-child { border-bottom: none; }
+  .policy-item:hover { background: var(--bg-card); }
+
+  .policy-num {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    opacity: 0.35;
+    line-height: 1;
+    padding-top: 3px;
+  }
+
+  .policy-content h3 {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+    line-height: 1.25;
+  }
+
+  .policy-content p {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  .policy-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-end;
+  }
+
+  /* ─── ABOUT STRIP ─── */
+  .about-strip {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 3.5rem clamp(2rem, 6vw, 5rem);
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 3.5rem;
+    align-items: center;
+    margin: 4rem 0;
+  }
+
+  .about-divider { background: var(--border); align-self: stretch; }
+
+  .about-mission h2 {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+
+  .about-mission p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .about-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .pillar {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pillar-icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    font-family: var(--serif);
+    margin-top: 2px;
+  }
+
+  .pillar h4 {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .pillar p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem clamp(1.5rem, 5vw, 5rem);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .footer-brand .logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-brand .logo::before {
+    content: '';
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .footer-brand p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 240px;
+  }
+
+  .footer-col h5 {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col ul li a {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border-light);
+    padding: 1.5rem clamp(1.5rem, 5vw, 5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom span {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .volume-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 1px;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero-divider { display: none; }
+    .novels-grid, .vlogs-grid { grid-template-columns: 1fr 1fr; }
+    footer { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .latest-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .novels-grid, .vlogs-grid { grid-template-columns: 1fr; }
+    .policy-item { grid-template-columns: 40px 1fr; }
+    .policy-tags { display: none; }
+    footer { grid-template-columns: 1fr; }
+    .about-strip { grid-template-columns: 1fr; }
+    .about-divider { display: none; }
+    nav .nav-links { display: none; }
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-left { animation: fadeUp 0.7s ease forwards; }
+  .hero-right { animation: fadeUp 0.7s 0.15s ease both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Axiom Review</div>
+  <ul class="nav-links">
+    <li><a href="novels.html">Novels</a></li>
+    <li><a href="#vlogs">Vlogs</a></li>
+    <li><a href="#policy">Policy & Frameworks</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <span class="nav-issue">Vol. I · 2025</span>
+</nav>
+
+<!-- HERO -->
+<div class="container">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="kicker">AI Governance · Policy · Management</div>
+      <h1 class="hero-title">
+        Where <em>intelligence</em><br>meets accountability
+      </h1>
+      <p class="hero-body">
+        Axiom Review publishes long-form novels, critical vlogs, and policy analysis at the intersection of artificial intelligence, governance, and modern management theory.
+      </p>
+      <a class="hero-cta" href="#latest">Explore the Review &rarr;</a>
+    </div>
+
+    <div class="hero-divider"></div>
+
+    <div class="hero-right">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+        <div class="hero-stat">
+          <div class="num">12</div>
+          <div class="label">Policy papers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">3</div>
+          <div class="label">Serialized novels</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">24</div>
+          <div class="label">Vlog episodes</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">8</div>
+          <div class="label">Frameworks reviewed</div>
+        </div>
+      </div>
+
+      <div class="hero-featured-card">
+        <span class="card-tag">Featured Policy</span>
+        <h3>The Accountability Gap in Enterprise AI Deployment</h3>
+        <p>As organizations rush to embed LLMs in decision-making workflows, governance structures have failed to keep pace. Who is responsible when the model is wrong?</p>
+        <div class="card-meta">
+          <span>Priya Menon</span>
+          <span>·</span>
+          <span>14 min read</span>
+          <span>·</span>
+          <span>Mar 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LATEST -->
+<div class="container" id="latest">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Latest from the Review</h2>
+      <a class="section-link">All articles →</a>
+    </div>
+
+    <div class="latest-grid">
+      <div class="latest-main">
+        <span class="card-tag policy">Policy Analysis</span>
+        <h2>Governing the Ungovernable: What the EU AI Act Gets Right — and What It Misses</h2>
+        <p>The EU AI Act represents the most ambitious attempt at AI regulation to date, but its risk-classification framework struggles with the pace of foundation model development. We examine five structural tensions that practitioners need to understand.</p>
+        <div class="card-meta">
+          <span>Dr. Arjun Krishnan</span>
+          <span>·</span>
+          <span>22 min read</span>
+          <span>·</span>
+          <span>Feb 2025</span>
+        </div>
+      </div>
+      <div class="latest-side">
+        <div class="side-card">
+          <span class="card-tag vlog">Vlog</span>
+          <h4>NIST AI RMF in Practice: A Manager's Field Guide</h4>
+          <p>Walking through the four core functions — Map, Measure, Manage, Govern — with real enterprise case studies.</p>
+          <div class="card-meta">
+            <span>28:40</span>
+          </div>
+        </div>
+        <div class="side-card">
+          <span class="card-tag novel">Novel · Chapter 4</span>
+          <h4>The Alignment Problem — A Corporate Thriller</h4>
+          <p>CEO Elena Vasquez realizes her company's AI hiring tool has been optimizing against a proxy she never sanctioned.</p>
+          <div class="card-meta">
+            <span>Reading · 35 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- NOVELS -->
+<div class="container" id="novels">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Serialized Novels</h2>
+      <a class="section-link" href="novels.html">View all →</a>
+    </div>
+
+    <div class="novels-grid">
+      <div class="novel-card" onclick="window.location='architecture-of-thinking.html'" style="cursor:pointer;">
+        <div class="novel-spine"></div>
+        <div class="num">01</div>
+        <div class="author">Daina Emmanuel</div>
+        <h3>The Architecture of Thinking</h3>
+        <p>On Judgment, Machines, and Reasoning. A leader navigating the intersection of technology, risk, and organizational decision-making discovers that the hardest questions about AI are not technical — they are human.</p>
+        <div class="novel-meta">
+          <span>2 Chapters</span>
+          <span>AI Governance · Management</span>
+        </div>
+      </div>
+
+      <div class="novel-card" style="opacity:0.45;cursor:default;">
+        <div class="novel-spine" style="background: var(--blue-accent); opacity: 0.5;"></div>
+        <div class="num">02</div>
+        <div class="author">Coming Soon</div>
+        <h3>Sovereign Signal</h3>
+        <p>Set in 2031 Brussels, a policy analyst discovers that three major AI governance bodies are unknowingly running on the same foundation model — with diverging fine-tunes.</p>
+        <div class="novel-meta">
+          <span>Forthcoming</span>
+          <span>Governance · Policy</span>
+        </div>
+      </div>
+
+      <div class="novel-card" style="opacity:0.45;cursor:default;">
+        <div class="novel-spine" style="background: #7a9e6a; opacity: 0.5;"></div>
+        <div class="num">03</div>
+        <div class="author">Coming Soon</div>
+        <h3>The Integration Memo</h3>
+        <p>When a Fortune 100 CHRO mandates AI-assisted performance reviews, a mid-level manager must navigate the human and institutional consequences.</p>
+        <div class="novel-meta">
+          <span>Forthcoming</span>
+          <span>Integration · HR</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- VLOGS -->
+<div class="container" id="vlogs">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Video Conversations</h2>
+      <a class="section-link">All episodes →</a>
+    </div>
+
+    <div class="vlogs-grid">
+      <div class="vlog-card">
+        <div class="vlog-thumb vlog-thumb-bg-1">
+          <div class="vlog-thumb-pattern">
+            <div class="play-btn">
+              <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+                <path d="M1 1L11 7L1 13V1Z" fill="#c9a96e" stroke="#c9a96e" stroke-width="1" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <span class="vlog-duration">32:18</span>
+        </div>
+        <span class="card-tag policy" style="margin-bottom: 0.5rem; display:inline-block;">EU AI Act</span>
+        <h4>Decoding the EU AI Act: What Managers Need to Know in 2025</h4>
+        <p>A practical breakdown of high-risk system classification, conformity assessments, and compliance timelines.</p>
+        <div class="card-meta" style="margin-top:0.75rem;">
+          <span>Mar 5, 2025</span>
+        </div>
+      </div>
+
+      <div class="vlog-card">
+        <div class="vlog-thumb vlog-thumb-bg-2">
+          <div class="vlog-thumb-pattern">
+            <div class="play-btn">
+              <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+                <path d="M1 1L11 7L1 13V1Z" fill="#c9a96e" stroke="#c9a96e" stroke-width="1" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <span class="vlog-duration">41:07</span>
+        </div>
+        <span class="card-tag vlog" style="margin-bottom: 0.5rem; display:inline-block;">NIST RMF</span>
+        <h4>The NIST AI Risk Management Framework: A Field Guide</h4>
+        <p>Moving from theory to practice — how the RMF's four functions map to real enterprise deployment cycles.</p>
+        <div class="card-meta" style="margin-top:0.75rem;">
+          <span>Feb 18, 2025</span>
+        </div>
+      </div>
+
+      <div class="vlog-card">
+        <div class="vlog-thumb vlog-thumb-bg-3">
+          <div class="vlog-thumb-pattern">
+            <div class="play-btn">
+              <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+                <path d="M1 1L11 7L1 13V1Z" fill="#c9a96e" stroke="#c9a96e" stroke-width="1" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <span class="vlog-duration">28:55</span>
+        </div>
+        <span class="card-tag novel" style="margin-bottom: 0.5rem; display:inline-block;">Integration</span>
+        <h4>AI Integration Readiness: The Questions Your Board Should Be Asking</h4>
+        <p>Five governance questions every leadership team must answer before deploying AI in core operations.</p>
+        <div class="card-meta" style="margin-top:0.75rem;">
+          <span>Jan 29, 2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- POLICY -->
+<div class="container" id="policy">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Policy & Frameworks</h2>
+      <a class="section-link">Full archive →</a>
+    </div>
+
+    <div class="policy-list">
+      <div class="policy-item">
+        <div class="policy-num">01</div>
+        <div class="policy-content">
+          <span class="card-tag policy">Comparative Analysis</span>
+          <h3>EU AI Act vs. NIST RMF: A Practitioner's Comparison</h3>
+          <p>A structured side-by-side analysis of the two dominant frameworks shaping enterprise AI governance, with practical recommendations for multi-jurisdictional organizations.</p>
+          <div class="card-meta" style="margin-top:0.75rem;">
+            <span>Dr. Arjun Krishnan</span>
+            <span>·</span>
+            <span>18 min read</span>
+          </div>
+        </div>
+        <div class="policy-tags">
+          <span class="card-tag policy">EU AI Act</span>
+          <span class="card-tag">NIST</span>
+        </div>
+      </div>
+
+      <div class="policy-item">
+        <div class="policy-num">02</div>
+        <div class="policy-content">
+          <span class="card-tag">Framework Deep-Dive</span>
+          <h3>The OECD AI Principles at Five Years: Impact and Gaps</h3>
+          <p>Reviewing the adoption and practical influence of the OECD's foundational principles across G20 economies, and identifying the gaps that more binding legislation must fill.</p>
+          <div class="card-meta" style="margin-top:0.75rem;">
+            <span>Priya Menon</span>
+            <span>·</span>
+            <span>15 min read</span>
+          </div>
+        </div>
+        <div class="policy-tags">
+          <span class="card-tag">OECD</span>
+          <span class="card-tag policy">G20</span>
+        </div>
+      </div>
+
+      <div class="policy-item">
+        <div class="policy-num">03</div>
+        <div class="policy-content">
+          <span class="card-tag policy">Integration</span>
+          <h3>Responsible AI Integration: A Board-Level Framework for 2025</h3>
+          <p>Moving beyond compliance checklists — a principled framework for executives integrating AI into core business functions, addressing accountability, auditability, and human oversight.</p>
+          <div class="card-meta" style="margin-top:0.75rem;">
+            <span>Nadia Osei</span>
+            <span>·</span>
+            <span>20 min read</span>
+          </div>
+        </div>
+        <div class="policy-tags">
+          <span class="card-tag novel">Governance</span>
+          <span class="card-tag">Integration</span>
+        </div>
+      </div>
+
+      <div class="policy-item">
+        <div class="policy-num">04</div>
+        <div class="policy-content">
+          <span class="card-tag vlog">Emerging Regulation</span>
+          <h3>India's DPDP Act and Its Implications for AI Systems</h3>
+          <p>India's Digital Personal Data Protection Act introduces compliance obligations that directly shape how AI systems can collect, process, and retain personal data — an analysis for practitioners operating in South Asian markets.</p>
+          <div class="card-meta" style="margin-top:0.75rem;">
+            <span>Rahul Deshpande</span>
+            <span>·</span>
+            <span>12 min read</span>
+          </div>
+        </div>
+        <div class="policy-tags">
+          <span class="card-tag vlog">DPDP</span>
+          <span class="card-tag policy">India</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT STRIP -->
+<div class="container" id="about">
+  <div class="about-strip">
+    <div class="about-mission">
+      <h2>A journal built for the AI governance moment</h2>
+      <p>Axiom Review was founded on the belief that the most consequential questions about artificial intelligence are not technical — they are institutional, ethical, and managerial. We publish work that bridges the gap between policy theory and organizational practice.</p>
+    </div>
+    <div class="about-divider"></div>
+    <div class="about-pillars">
+      <div class="pillar">
+        <div class="pillar-icon">I</div>
+        <div>
+          <h4>AI Governance</h4>
+          <p>Regulatory frameworks, accountability structures, and the politics of AI oversight.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">II</div>
+        <div>
+          <h4>Integration Considerations</h4>
+          <p>What organizations must think through before, during, and after deploying AI systems.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">III</div>
+        <div>
+          <h4>Policy Analysis</h4>
+          <p>Careful reading of emerging AI policy — from the EU to India to the UN — with implications for practitioners.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="logo">Axiom Review</div>
+    <p>A journal of AI governance, policy analysis, and the management of intelligent systems. Published independently.</p>
+  </div>
+  <div class="footer-col">
+    <h5>Content</h5>
+    <ul>
+      <li><a href="novels.html">Novels</a></li>
+      <li><a href="#">Vlogs</a></li>
+      <li><a href="#">Policy Papers</a></li>
+      <li><a href="#">Frameworks</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Topics</h5>
+    <ul>
+      <li><a href="#">AI Governance</a></li>
+      <li><a href="#">EU AI Act</a></li>
+      <li><a href="#">NIST RMF</a></li>
+      <li><a href="#">AI Integration</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Publication</h5>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Submit Work</a></li>
+      <li><a href="#">Editorial Policy</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2025 Axiom Review. All rights reserved.</span>
+  <span class="volume-tag">Volume I — Issue 1</span>
+</div>
+
+</body>
+</html>
