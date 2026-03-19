@@ -14,15 +14,6 @@ prev:
 next:
   title: "When Recognition Invites Resistance"
   url: "/novels/architecture-of-thinking/chapter-04"
-toc:
-  - { num: "—", title: "Introduction", url: "/novels/architecture-of-thinking/introduction", current: false }
-  - { num: "01", title: "The Pattern Beneath the Noise", url: "/novels/architecture-of-thinking/chapter-01", current: false }
-  - { num: "02", title: "Signals", url: "/novels/architecture-of-thinking/chapter-02", current: false }
-  - { num: "03", title: "The Cost of Seeing Earlier", url: "/novels/architecture-of-thinking/chapter-03", current: true }
-  - { num: "04", title: "When Recognition Invites Resistance", url: "/novels/architecture-of-thinking/chapter-04", current: false }
-  - { num: "05", title: "Quiet Coalitions", url: "/novels/architecture-of-thinking/chapter-05", current: false }
-  - { num: "06", title: "When the Future Is Seen Before It Happens", url: "/novels/architecture-of-thinking/chapter-06", current: false }
-  - { num: "07", title: "The Work After the Win", url: "/novels/architecture-of-thinking/chapter-07", current: false }
 ---
 
 In the meeting room, the idea had sounded almost effortless — the kind of proposal that makes people nod before its consequences have fully settled in their minds. Build a system that observes behavior instead of reacting only when something breaks. Shift from event detection to pattern intelligence. Move from certainty to probability.

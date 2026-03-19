@@ -11,16 +11,9 @@ themes: "Integration · Credibility · Recognition"
 prev:
   title: "When the Future Is Seen Before It Happens"
   url: "/novels/architecture-of-thinking/chapter-06"
-next: null
-toc:
-  - { num: "—", title: "Introduction", url: "/novels/architecture-of-thinking/introduction", current: false }
-  - { num: "01", title: "The Pattern Beneath the Noise", url: "/novels/architecture-of-thinking/chapter-01", current: false }
-  - { num: "02", title: "Signals", url: "/novels/architecture-of-thinking/chapter-02", current: false }
-  - { num: "03", title: "The Cost of Seeing Earlier", url: "/novels/architecture-of-thinking/chapter-03", current: false }
-  - { num: "04", title: "When Recognition Invites Resistance", url: "/novels/architecture-of-thinking/chapter-04", current: false }
-  - { num: "05", title: "Quiet Coalitions", url: "/novels/architecture-of-thinking/chapter-05", current: false }
-  - { num: "06", title: "When the Future Is Seen Before It Happens", url: "/novels/architecture-of-thinking/chapter-06", current: false }
-  - { num: "07", title: "The Work After the Win", url: "/novels/architecture-of-thinking/chapter-07", current: true }
+next:
+  title: "The Space Between Yes and No"
+  url: "/novels/architecture-of-thinking/chapter-08"
 ---
 
 In the days following the client presentation, the atmosphere around the office shifted in a way that was difficult to name but easy to feel. Conversations carried a quiet pride, yet beneath it sat a new pressure. ASD was no longer a concept that needed defending. It was a system that now had to work reliably in the real world.

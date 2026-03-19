@@ -2,13 +2,34 @@
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
-const { title, chapterNum, chapterLabel, novel, novelSlug, date, themes, readingTime, prev, next, toc } = frontmatter;
+const { title, chapterNum, chapterLabel, novel, novelSlug, date, themes, readingTime, prev, next } = frontmatter;
+
+// ── CENTRAL TOC ──────────────────────────────────────────────────────────────
+// Add new chapters here only. All chapter pages update automatically.
+const ALL_CHAPTERS = [
+  { num: "—",  title: "Introduction",                              slug: "introduction" },
+  { num: "01", title: "The Pattern Beneath the Noise",             slug: "chapter-01" },
+  { num: "02", title: "Signals",                                   slug: "chapter-02" },
+  { num: "03", title: "The Cost of Seeing Earlier",                slug: "chapter-03" },
+  { num: "04", title: "When Recognition Invites Resistance",       slug: "chapter-04" },
+  { num: "05", title: "Quiet Coalitions",                          slug: "chapter-05" },
+  { num: "06", title: "When the Future Is Seen Before It Happens", slug: "chapter-06" },
+  { num: "07", title: "The Work After the Win",                    slug: "chapter-07" },
+  { num: "08", title: "The Space Between Yes and No",              slug: "chapter-08" },
+];
+
+const currentSlug = Astro.url.pathname.split('/').pop();
+const toc = ALL_CHAPTERS.map(ch => ({
+  ...ch,
+  url: `/novels/architecture-of-thinking/${ch.slug}`,
+  current: ch.slug === currentSlug,
+}));
+// ─────────────────────────────────────────────────────────────────────────────
 ---
 
 <BaseLayout title={`${chapterLabel}: ${title}`} description={`${title} — ${novel}`}>
   <div class="progress-bar" id="progressBar"></div>
 
-  <!-- BREADCRUMB in nav is handled by active state — add sub-breadcrumb here -->
   <div style="padding: 0.75rem clamp(1.5rem,5vw,4rem); border-bottom: 1px solid var(--border); display:flex; align-items:center; gap:0.6rem; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted);">
     <a href="/novels" style="color:var(--text-muted); transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Novels</a>
     <span style="color:var(--border);">/</span>
@@ -84,21 +105,19 @@ const { title, chapterNum, chapterLabel, novel, novelSlug, date, themes, reading
         <div class="sidebar-novel-sub">On Judgment, Machines, and Reasoning</div>
       </div>
 
-      {toc && (
-        <div class="sidebar-section">
-          <span class="sidebar-label">Contents</span>
-          <ul class="sidebar-toc">
-            {toc.map((item: any) => (
-              <li class={item.current ? 'active' : ''}>
-                <a href={item.url}>
-                  <span class="toc-num">{item.num}</span>
-                  {item.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div class="sidebar-section">
+        <span class="sidebar-label">Contents</span>
+        <ul class="sidebar-toc">
+          {toc.map((item) => (
+            <li class={item.current ? 'active' : ''}>
+              <a href={item.url}>
+                <span class="toc-num">{item.num}</span>
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div class="sidebar-section">
         <span class="sidebar-label">Novel</span>

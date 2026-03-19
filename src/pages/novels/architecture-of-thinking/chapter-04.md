@@ -14,15 +14,6 @@ prev:
 next:
   title: "Quiet Coalitions"
   url: "/novels/architecture-of-thinking/chapter-05"
-toc:
-  - { num: "—", title: "Introduction", url: "/novels/architecture-of-thinking/introduction", current: false }
-  - { num: "01", title: "The Pattern Beneath the Noise", url: "/novels/architecture-of-thinking/chapter-01", current: false }
-  - { num: "02", title: "Signals", url: "/novels/architecture-of-thinking/chapter-02", current: false }
-  - { num: "03", title: "The Cost of Seeing Earlier", url: "/novels/architecture-of-thinking/chapter-03", current: false }
-  - { num: "04", title: "When Recognition Invites Resistance", url: "/novels/architecture-of-thinking/chapter-04", current: true }
-  - { num: "05", title: "Quiet Coalitions", url: "/novels/architecture-of-thinking/chapter-05", current: false }
-  - { num: "06", title: "When the Future Is Seen Before It Happens", url: "/novels/architecture-of-thinking/chapter-06", current: false }
-  - { num: "07", title: "The Work After the Win", url: "/novels/architecture-of-thinking/chapter-07", current: false }
 ---
 
 Recognition arrived quietly for Ananya — not as applause or celebration, but as a slide placed halfway through the quarterly review deck. She noticed it the moment it appeared on the screen, the phrase "Behavioral Intelligence Layer (Pilot Initiative)" sitting calmly between two familiar sections of the presentation. No one spoke her name. The slide simply presented the capability as though it had emerged naturally from the system itself.
