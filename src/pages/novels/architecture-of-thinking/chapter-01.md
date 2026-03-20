@@ -36,15 +36,27 @@ She fell asleep smiling.
 
 <div class="scene-break"><span></span><span></span><span></span></div>
 
-The next morning began earlier than usual.
+The next morning began earlier than usual. Ananya stirred awake to Mira’s whisper.
 
 <p class="dialogue">"Amma…" Mira whispered as she climbed into the bed, her hair still messy from sleep. "These socks are wrong."</p>
 
-<p class="dialogue">"What's wrong with them, sweetie?" Ananya blinked awake.</p>
+<p class="dialogue">"What's wrong with them, sweetie?" She opened her eyes slowly, pulled Mira closer, and brushed her hair back from her face.</p>
 
 <p class="dialogue">"They're tight on the thinking part of my foot. And if it's tight, I won't think properly today."</p>
 
-<p class="dialogue">"What ! ... The thinking foot," Ananya explained before she repeated thoughtfully. "That must be very important on the first day of school."</p>
+Ananya smiled faintly, still half asleep. She kissed Mira’s forehead and held her a little closer.
+
+<p class="dialogue">“The thinking foot?” she murmured softly. “That’s very important… we can’t have that getting squished on your first day.”</p>
+
+She sat up, easing Mira onto her lap, and turned the sock inside out, smoothing the seam with her fingers.
+
+<p class="dialogue"> “Let’s fix it properly,” she said gently. “Your thinking needs to work today.”</p>
+
+<p class="dialogue">"Yes. Right here." She poked the top of her foot. "All the good ideas come from here. If it's tight, I can't think good."</p>
+
+<p class="timestamp">Ananya went through her calendar mentally — 7:12 AM · 9 AM risk review meeting</p>
+
+<p class="dialogue">"What ! ... The thinking foot," Ananya exclaimed,before she repeated thoughtfully. "That must be very important on the first day of school."</p>
 
 <p class="dialogue">"Yes. Right here." She poked the top of her foot. "All the good ideas come from here. If it's tight, I can't think good."</p>
 
