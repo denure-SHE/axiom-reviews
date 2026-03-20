@@ -104,9 +104,9 @@ That evening after school, Mira's hesitation had turned to distress.
 
 That night, the certainty broke.
 
-"I don't want to go again," Mira said, sitting upright in bed. The day is too long. Teacher talks and talks, and I don't talk much. In preschool we knew everything. Snack time. Story time. Now I don't know anything." She wiped her face angrily. "I don't like when things are too big. I am not going tomorrow"
+"I don't want to go again," Mira said, sitting upright in bed. " I have to sit for so long, I cant go to swings. Teacher talks and talks, and I don't talk much. In preschool we knew everything. Snack time. Story time. Now I don't know anything." She wiped her face angrily. "I don't like when things are too big. I am not going tomorrow"
 
-"You don't have to know everything," Ananya said softly. "You just have to stay."
+"You don't have to know everything," Ananya said softly.
 "Amma you dont know anything " Mira said with a crunched face. "Lets go to our old school ok Amma"
 
 "You just have to stay. Lets try for a week OK? "
@@ -140,7 +140,11 @@ Rajiv considered her words, his brow furrowing. "So you're saying the model is m
 Rajiv was silent for a long moment, his gaze thoughtful. "You know that kind of disruption won't be easy," he said finally. "There will be pushback, uncertainty, temporary instability. Are you prepared to own that?"
 
 Ananya met his eyes steadily. "Yes” She thought.  ‘Mira is facing that same uncertainty at school. She wants a school that never feels overwhelming and we want a system that never feels uncertain. I think both will have to learn.’
-Rajiv nodded slowly, the ghost of a smile tugging at his lips. "Then don't bring me a patch," he said. "Bring me a philosophy."
+
+Rajiv nodded slowly, the ghost of a smile tugging at his lips. 
+
+"Then don't bring me a patch," he said. "Bring me a philosophy."
+
 The next morning, Mira stood at the door, still uncertain but willing to try. 
 The feeling wasn’t anywhere close to excitement. It was a compromise.
 
@@ -148,7 +152,7 @@ At work she began drafting the architecture. Ananya couldn't shake the sense tha
 Just like Mira, the system needed to learn a new rhythm - one that could anticipate where things were heading, rather than just reacting after the fact.
 Ananya knew that rebuilding the core detection logic would be disruptive, filled with uncertainty and temporary instability. 
 
-But she also knew that both Mira and the risk engine would have to learn to navigate that uncertainty, to find the rhythm beneath the noise. It wouldn't be smooth, but it was the only way to see what others had missed.
+But she also knew that both Mira and the risk engine would have to learn to navigate that uncertainty, to find the rhythm beneath the noise. 
 
 Both journeys asked for the same thing. Longer learning curves required patience. Early discomfort demanded tolerance for uncertainty. 
 

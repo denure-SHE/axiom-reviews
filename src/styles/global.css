@@ -295,39 +295,33 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
   padding-left: 0.75rem;
 }
 
-/* ─── MARKDOWN ELEMENT STYLES (for chapter reading pages) ─── */
+/* ─── MARKDOWN READING BODY ELEMENTS ─── */
 
-/* Dialogue — regular paragraphs inside reading-body */
-.reading-body p {
-  font-family: var(--serif);
-  font-size: clamp(1.15rem, 2vw, 1.3rem);
-  line-height: 2;
-  color: #ddd9d0;
-  margin-bottom: 1.75em;
-  font-weight: 400;
-  letter-spacing: 0.012em;
-}
-
-/* Scene break — hr */
+/* Scene break: --- renders as hr */
 .reading-body hr {
   border: none;
+  border-top: none;
+  margin: 3em auto;
+  text-align: center;
+  overflow: visible;
+  height: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3em auto;
   max-width: var(--reading-width);
-  text-align: center;
 }
 
 .reading-body hr::after {
   content: '· · ·';
   font-family: var(--serif);
-  font-size: 1.2rem;
-  letter-spacing: 0.5em;
+  font-size: 1.1rem;
+  letter-spacing: 0.6em;
   color: var(--text-muted);
+  position: relative;
+  padding: 0 1rem;
 }
 
-/* Section headers — h2 */
+/* Section headings: ## Title */
 .reading-body h2 {
   font-family: var(--sans);
   font-size: 0.62rem;
@@ -339,6 +333,7 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
   display: flex;
   align-items: center;
   gap: 1rem;
+  border: none;
 }
 
 .reading-body h2::before,
@@ -347,68 +342,64 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
   flex: 1;
   height: 1px;
   background: var(--border);
+  display: block;
 }
 
-/* Blockquote — standalone key lines (plain >) */
+/* Blockquote: > text — standalone key line (gold italic) */
 .reading-body blockquote {
   border-left: 2px solid var(--gold-dim);
-  padding-left: 1.5rem;
+  padding: 0 0 0 1.5rem;
   margin: 2.5em 0;
+  background: transparent;
 }
 
 .reading-body blockquote p {
-  font-style: italic;
-  color: var(--gold);
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  color: var(--gold) !important;
   font-size: clamp(1.1rem, 2.2vw, 1.3rem) !important;
-  line-height: 1.6 !important;
+  line-height: 1.65 !important;
   margin-bottom: 0 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.01em !important;
 }
 
-/* Insight box — bold blockquote (> **text**) */
+/* Insight box: > **bold text** — card style */
 .reading-body blockquote p strong {
   font-style: normal;
   font-weight: 400;
   color: var(--text-secondary);
 }
 
-.reading-body blockquote:has(strong) {
+.reading-body blockquote:has(p > strong) {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-left: 3px solid var(--gold-dim);
-  padding: 2rem;
+  padding: 1.75rem 2rem;
   margin: 2.5em 0;
 }
 
-.reading-body blockquote:has(strong) p {
+.reading-body blockquote:has(p > strong) p {
   color: var(--text-secondary) !important;
   font-style: normal !important;
   font-size: clamp(1rem, 1.8vw, 1.15rem) !important;
-  line-height: 1.75 !important;
+  line-height: 1.8 !important;
 }
 
-/* Italic timestamp line */
-.reading-body > p > em:only-child,
+/* Timestamp: *italic only line* */
 .reading-body p:has(> em:only-child) {
-  display: block;
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+  font-family: var(--sans) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: var(--text-muted) !important;
   border-left: 2px solid var(--border);
   padding-left: 0.75rem;
-  margin-bottom: 1.5em;
-  font-style: normal;
+  margin-bottom: 1.5em !important;
+  font-style: normal !important;
+  line-height: 1.5 !important;
 }
 
-/* Drop cap on first paragraph */
-.reading-body > p:first-of-type::first-letter {
-  font-family: var(--serif);
-  font-size: 5.2rem;
-  font-weight: 400;
-  float: left;
-  line-height: 0.78;
-  margin-right: 0.12em;
-  margin-top: 0.1em;
-  color: var(--gold);
+.reading-body p:has(> em:only-child) em {
+  font-style: normal;
 }
