@@ -60,7 +60,9 @@ Mira hesitated.
 
 "Riya didn't sit with me," she said after a moment. "She sat with someone else."
 
-Then she added thoughtfully: *"I wonder if Riya made a new friend."* Ananya recognized the familiar pattern forming beneath the casual statement — a single moment meant little, but if the pattern repeated, the story would become clearer.
+Then she added thoughtfully: 
+>"I wonder if Riya made a new friend."
+Ananya recognized the familiar pattern forming beneath the casual statement — a single moment meant little, but if the pattern repeated, the story would become clearer.
 
 Some signals needed time before their meaning became visible.
 
@@ -84,8 +86,8 @@ Rajiv finally spoke. "And will your model change that?"
 
 "It watches trajectories instead of events," she said. "Clusters. Movement. Repetition over time."
 
-The room absorbed the idea more slowly than Ananya had expected. For a few seconds no one spoke, as if the shift she had suggested needed time to settle into the logic everyone had been using for years.
-What she was proposing was subtle but unsettling. Instead of waiting for certainty, the system would begin noticing probability. Instead of reacting only when thresholds were crossed, it would observe patterns forming beneath them. The difference sounded small when described aloud, but to Ananya it felt like asking the organization to look at risk through an entirely different lens.
+The room absorbed the idea more slowly than Ananya had expected. 
+Instead of reacting only when thresholds were crossed, it would observe patterns forming beneath them. The difference sounded small when described aloud, but to Ananya it felt like asking the organization to look at risk through an entirely different lens.
 
 Rajiv leaned back in his chair, studying the whiteboard where the threshold line and clustered points were still visible.
 “This isn’t calibration,” he said.
