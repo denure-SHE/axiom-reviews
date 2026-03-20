@@ -91,14 +91,15 @@ Instead of reacting only when thresholds were crossed, it would observe patterns
 
 Rajiv leaned back in his chair, studying the whiteboard where the threshold line and clustered points were still visible.
 “This isn’t calibration,” he said.
-“No,” Ananya replied, meeting his gaze. “It’s a different way of seeing.”
+
+>“No,” Ananya replied, meeting his gaze. “It’s a different way of seeing.”
 
 
 For a moment Rajiv said nothing. His eyes moved briefly across the room — Finance, Compliance, Engineering — measuring the reaction in the same quiet way he usually did when decisions were still forming.
 
 "Run it in shadow mode," he said finally. "No alerts. No external escalation. Let the system observe quietly while we learn what early signals actually look like."
 
-"Build the proposal," he said. "And build the governance with it."
+>"Build the proposal," he said. "And build the governance with it."
 
 It wasn't approval. But it allowed the work to begin.
 
