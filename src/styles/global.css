@@ -294,3 +294,121 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
   border-left: 2px solid var(--border);
   padding-left: 0.75rem;
 }
+
+/* ─── MARKDOWN ELEMENT STYLES (for chapter reading pages) ─── */
+
+/* Dialogue — regular paragraphs inside reading-body */
+.reading-body p {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2vw, 1.3rem);
+  line-height: 2;
+  color: #ddd9d0;
+  margin-bottom: 1.75em;
+  font-weight: 400;
+  letter-spacing: 0.012em;
+}
+
+/* Scene break — hr */
+.reading-body hr {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3em auto;
+  max-width: var(--reading-width);
+  text-align: center;
+}
+
+.reading-body hr::after {
+  content: '· · ·';
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  letter-spacing: 0.5em;
+  color: var(--text-muted);
+}
+
+/* Section headers — h2 */
+.reading-body h2 {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin: 3em 0 2em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reading-body h2::before,
+.reading-body h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Blockquote — standalone key lines (plain >) */
+.reading-body blockquote {
+  border-left: 2px solid var(--gold-dim);
+  padding-left: 1.5rem;
+  margin: 2.5em 0;
+}
+
+.reading-body blockquote p {
+  font-style: italic;
+  color: var(--gold);
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Insight box — bold blockquote (> **text**) */
+.reading-body blockquote p strong {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.reading-body blockquote:has(strong) {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold-dim);
+  padding: 2rem;
+  margin: 2.5em 0;
+}
+
+.reading-body blockquote:has(strong) p {
+  color: var(--text-secondary) !important;
+  font-style: normal !important;
+  font-size: clamp(1rem, 1.8vw, 1.15rem) !important;
+  line-height: 1.75 !important;
+}
+
+/* Italic timestamp line */
+.reading-body > p > em:only-child,
+.reading-body p:has(> em:only-child) {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-left: 2px solid var(--border);
+  padding-left: 0.75rem;
+  margin-bottom: 1.5em;
+  font-style: normal;
+}
+
+/* Drop cap on first paragraph */
+.reading-body > p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 5.2rem;
+  font-weight: 400;
+  float: left;
+  line-height: 0.78;
+  margin-right: 0.12em;
+  margin-top: 0.1em;
+  color: var(--gold);
+}

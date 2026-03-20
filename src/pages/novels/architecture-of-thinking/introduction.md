@@ -13,16 +13,15 @@ next:
   title: "The Pattern Beneath the Noise"
   url: "/novels/architecture-of-thinking/chapter-01"
 ---
-
 Organizations today run on systems. Some are visible—models, dashboards, policies, workflows. Others are quieter but just as powerful: habits of reasoning, patterns of trust, and the invisible order in which people think before they decide.
 
 For a long time, these systems were almost entirely human. Data informed them, but judgment carried them forward. Decisions moved through people—through investigation, conversation, interpretation, and finally action.
 
-<p class="standalone">Today something new sits inside that chain.</p>
+> Today something new sits inside that chain.
 
 Intelligent systems can observe patterns, generate explanations, and influence decisions faster than the organizations that deploy them. They promise clarity, scale, and efficiency. But they also introduce a deeper question that many institutions are only beginning to confront:
 
-<p class="standalone">Who governs the reasoning of the systems we build?</p>
+> Who governs the reasoning of the systems we build?
 
 This book is a story about that question.
 
@@ -38,7 +37,7 @@ At home, Ananya inhabits another world—one that runs on a different rhythm. He
 
 And slowly, a quiet realization emerges. The same questions she faces at work echo in the most ordinary moments at home.
 
-<div class="insight-box"><p>When should you intervene, and when should you step back? How do you build something strong enough to stand on its own? What does leadership look like when the goal is not control, but trust?</p></div>
+> **When should you intervene, and when should you step back? How do you build something strong enough to stand on its own? What does leadership look like when the goal is not control, but trust?**
 
 In the office, Ananya learns to design systems that allow teams to think clearly under uncertainty. At home, she learns that clarity sometimes comes from letting others try, fail, and grow without interference. The boundaries between the two worlds begin to blur—not in conflict, but in insight.
 
@@ -46,7 +45,7 @@ The patience learned in parenting reshapes how she leads. The discipline require
 
 As the system her team built begins to scale across the organization, something unexpected begins to happen. The system does not fail dramatically. Instead, it begins to drift in subtle ways. Explanations appear before investigations. Narratives start shaping how signals are interpreted. The order of reasoning that once anchored the system begins to shift.
 
-<p class="standalone">Complex systems rarely break all at once. More often, they evolve quietly until the sequence of thinking that once held them together changes.</p>
+> Complex systems rarely break all at once. More often, they evolve quietly until the sequence of thinking that once held them together changes.
 
 Restoring that sequence—the architecture of thinking—is ultimately the deeper work of leadership.
 
