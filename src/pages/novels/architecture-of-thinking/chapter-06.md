@@ -15,7 +15,13 @@ next:
   title: "The Work After the Win"
   url: "/novels/architecture-of-thinking/chapter-07"
 ---
-"Early Risk Intelligence — Beyond Threshold Monitoring" sat bold on the opening slide. The room was virtually full, screens tiled across time zones. The client's risk committee dialed in with their usual composure: precise questions, measured skepticism, professional caution.
+
+As Ananya set up her laptop for the high-stakes client presentation, she couldn't help but feel a twinge of irony. ASD, the technology solution she had poured her heart into, had been questioned and scrutinized internally for months. Yet now, here she was, about to showcase its capabilities to the client's risk committee. With three weeks of intensive preparation behind her, Ananya took a deep breath, ready to prove the value of what she and her team had built."
+
+>"Early Risk Intelligence — Beyond Threshold Monitoring" 
+
+It sat bold on the opening slide. The room was virtually full, screens tiled across time zones. The client's risk committee dialed in with their usual composure: precise questions, measured skepticism, professional caution.
+
 
 The sales team began with the usual talking points, then pivoted.
 
@@ -23,7 +29,7 @@ The sales team began with the usual talking points, then pivoted.
 
 The word lingered. Not breach. Not violation. *Drift.* Ananya gestured to the screen. Instead of red alert boxes, a longitudinal timeline appeared — confidence curves rising gradually over weeks. Cluster visualization. Geographic dispersion mapping.
 
-"Our approach isn't about pointing fingers," she said evenly. "It's about providing early awareness, so we can engage and respond before critical thresholds are reached."
+"Our approach is about providing early awareness, so we can engage and respond before critical thresholds are reached."
 
 * * *
 
@@ -77,6 +83,8 @@ Aarav turned to Ananya. "She sounds different."
 
 "She is."
 
+The change in Mira was palpable - no longer resisting, but embracing her schooling, her voice filled with the wonder of learning. It was a testament to the resilience Ananya had seen blossom in her daughter, and a promise of the growth yet to come. 
+
 In the weeks that followed, Aarav quietly reclaimed space at home. He picked Mira up twice a week. Handled grocery runs. Attended after-school sessions without checking his phone.
 
 "You don't have to do everything alone," he said one evening.
@@ -93,11 +101,15 @@ A month later, Mira stood on stage during assembly, reading steadily from a shor
 
 "Yes."
 
+* * * 
 Later that night, Aarav placed a cup of tea beside her laptop.
 
-"You look tired," he said. "But... not the bad kind."
+"You look tired?" he said. 
 
 "I think we're getting somewhere."
+She leaned back in the chair. “I think we’re getting somewhere.”
+“At work?”
+“At work,” she said, then added after a moment, “And maybe here too.”
 
 "New things always look a bit chaotic at first."
 

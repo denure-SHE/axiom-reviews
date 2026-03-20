@@ -53,7 +53,9 @@ The answers arrived quickly. Client data might arrive inconsistently across regi
 
 Two weeks later, the company held its quarterly recognition event. When Ananya stepped onto the stage, she kept her remarks brief, acknowledging the collective effort that had made ASD a reality. Raghav and two younger engineers joined her.
 
-Afterward, stories surfaced — regression runs that refused to converge, probability curves that triggered midnight Slack debates, review meetings that had felt suspiciously like interrogations.
+Afterward, the group gathered for lunch in the cafeteria, and the tension that had defined the previous months loosened into something lighter. 
+
+The laughed over as stories surfaced - regression runs that refused to converge, probability curves that triggered midnight Slack debates, review meetings that had felt suspiciously like interrogations. 
 
 One engineer said quietly, "I've never seen something we built change how clients talk about us."
 
@@ -67,7 +69,9 @@ As Ananya stepped back into her home that evening, a handmade card waited at her
 
 The letters leaned unevenly across the page, surrounded by blue stars that looked as if they had been drawn very carefully and then colored in with great enthusiasm.
 
-Aarav appeared from the kitchen carrying a small cake.
+For Amma for your computer thing.
+
+Aarav appeared from the kitchen carrying a small cake. “Blue team insisted on dessert,” he said.
 
 "Did you get first prize?" Mira asked immediately.
 
@@ -93,6 +97,8 @@ The words landed differently from the applause earlier that day.
 
 "Was it worth it?"
 
+Inside the room Mira looked up, her brow furrowed in concentration as she carefully sounded out each letter to the enthralled stuffed animals."
+
 "Yes," Ananya said after a moment. "Worth it."
 
 Recognition does not remove exhaustion. But it changes how the exhaustion feels.
@@ -114,6 +120,14 @@ Back in the war room she summarized the call. "They want faster," she said. "We 
 Integration continued. Milestones were met. Documentation evolved. The team began anticipating objections before they were raised. Engineers corrected one another's assumptions without defensiveness. Analysts volunteered improvements before instructions arrived.
 
 > **Late one evening, Ananya noticed something unexpected within herself. There was no adrenaline spike. No defensive readiness. Just steady forward motion. The work after the win is where credibility is built. Innovation earns attention. Execution earns trust. And trust, once earned, moves markets quietly — without spectacle, without noise, and without the need for argument.**
+
+Later that week Mira came home carrying a small certificate. "Participation star," she announced proudly. 
+"For what?" Ananya asked. "For helping clean the art table." 
+
+"That's important," Ananya said with equal seriousness. "I'm proud of you." 
+"Teacher said helping counts." 
+
+Recognition, she thought, functions the same way in every system—from corporate teams to kindergarten classrooms. It signals contribution. It sustains effort. 
 
 That night, while Mira drifted toward sleep, she murmured:
 

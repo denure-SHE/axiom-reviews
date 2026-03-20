@@ -61,7 +61,7 @@ She poured cereal, warmed the milk, cut fruit slightly uneven — the way Mira l
 
 Ananya smiled faintly.
 
-"And after lunch?"
+"Aha ... And after lunch?"
 
 Mira considered.
 
@@ -107,7 +107,7 @@ Inside the classroom, Mira held on longer than usual.
 
 ## The Escalation
 
-The meeting room was bustling. Sales had laptops open. Legal sat with papers scattered in front of them, red marks scrawled across the contracts. Delivery looked weary, as if the discussion hadn't even begun yet.
+The meeting room was bustling with activity. Sales had laptops open, their fingers flying across the keyboards. Legal sat around the table, papers scattered in front of them, red marks scrawled across the contracts. Delivery looked weary, as if the discussion hadn't even begun yet. Ananya listened as the conversation moved quickly, dates and numbers and penalties flying back and forth, as if speed could somehow reduce the complexity of the issue.
 
 Ananya finally spoke. Her voice was steady.
 
