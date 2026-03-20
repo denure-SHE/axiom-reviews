@@ -27,7 +27,9 @@ The sales team began with the usual talking points, then pivoted.
 
 "We'd like to show you an intelligence layer we've been piloting internally," the Sales director said. "A framework that identifies behavioral drift before exposure escalates."
 
-The word lingered. Not breach. Not violation. *Drift.* Ananya gestured to the screen. Instead of red alert boxes, a longitudinal timeline appeared — confidence curves rising gradually over weeks. Cluster visualization. Geographic dispersion mapping.
+>The word lingered. Not breach. Not violation. Drift. 
+
+Ananya gestured to the screen. Instead of red alert boxes, a longitudinal timeline appeared — confidence curves rising gradually over weeks. Cluster visualization. Geographic dispersion mapping.
 
 "Our approach is about providing early awareness, so we can engage and respond before critical thresholds are reached."
 

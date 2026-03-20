@@ -64,7 +64,8 @@ Mira hesitated.
 "Riya didn't sit with me," she said after a moment. "She sat with someone else."
 
 Then she added thoughtfully: 
->"I wonder if Riya made a new friend."
+
+"I wonder if Riya made a new friend."
 Ananya recognized the familiar pattern forming beneath the casual statement — a single moment meant little, but if the pattern repeated, the story would become clearer.
 
 Some signals needed time before their meaning became visible.
@@ -72,9 +73,10 @@ Some signals needed time before their meaning became visible.
 ## The Proposal
 
 The next morning, as Ananya presented the new approach to the team, she could feel the room's uncertainty. But Rajiv's decision to run the shadow model in a quiet observational mode offered a chance to learn what early signals might actually look like, without the pressure of immediate escalation. 
+
 Ananya brought up the timeline on the screen. "This is how the system works now," she explained, pointing to the threshold line. and then she zoomed out to show the sequence she had been studying. "But real behavior doesn't just arrive as a single event. It builds up, testing the limits before adapting."
-T
-he room studied the pattern quietly.
+
+The room studied the pattern quietly.
 
 Finance spoke first. "If we increase sensitivity, our investigation load rises. Operational costs follow."
 
@@ -88,8 +90,7 @@ Rajiv finally spoke. "And will your model change that?"
 
 "It watches trajectories instead of events," she said. "Clusters. Movement. Repetition over time."
 
-The room absorbed the idea more slowly than Ananya had expected. 
-Instead of reacting only when thresholds were crossed, it would observe patterns forming beneath them. The difference sounded small when described aloud, but to Ananya it felt like asking the organization to look at risk through an entirely different lens.
+The difference sounded small when described aloud, but to Ananya it felt like asking the organization to look at risk through an entirely different lens.
 
 Rajiv leaned back in his chair, studying the whiteboard where the threshold line and clustered points were still visible.
 “This isn’t calibration,” he said.
