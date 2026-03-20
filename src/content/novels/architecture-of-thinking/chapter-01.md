@@ -48,7 +48,7 @@ The next morning began earlier than usual.
 
 <p class="dialogue">"Yes. Right here." She poked the top of her foot. "All the good ideas come from here. If it's tight, I can't think good."</p>
 
-<p class="timestamp">7:12 AM · 9 AM risk review meeting</p>
+<p class="timestamp">Ananya mentally went to her calendar 7:12 AM · 9 AM risk review meeting</p>
 
 Ananya knelt on the floor, turned the socks inside out, and carefully smoothed the seam with her fingers. "Try now. We can't have the thinking foot distracted."
 
