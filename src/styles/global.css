@@ -281,3 +281,16 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
 /* ─── RESPONSIVE ─── */
 @media (max-width: 960px) { .page-wrapper { grid-template-columns: 1fr; } .sidebar { display: none; } footer { grid-template-columns: 1fr 1fr; gap: 2rem; } }
 @media (max-width: 600px) { .chapter-nav { grid-template-columns: 1fr; } .meta-divider { display: none; } nav .nav-links { display: none; } footer { grid-template-columns: 1fr; } }
+
+/* ─── TIMESTAMP ─── */
+.timestamp {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.5em;
+  border-left: 2px solid var(--border);
+  padding-left: 0.75rem;
+}
