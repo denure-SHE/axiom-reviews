@@ -15,9 +15,12 @@ next:
   title: "When the Future Is Seen Before It Happens"
   url: "/novels/architecture-of-thinking/chapter-06"
 ---
-Just because the numbers looked good, Ananya knew it did not automatically translate into priority. If ASD was going to grow, it would need more than performance metrics — it would need trust.
+As Ananya reviewed the latest quarterly numbers, a sense of unease settled in her chest. The data was promising, but she knew the metrics alone would not be enough. Just because the numbers looked good, Ananya knew it did not automatically translate into priority. If ASD was going to grow, it would need more than just performance metrics – it would need trust.
 
-The resistance would likely come not as outright rejection, but as delay tactics. "Let's observe for another quarter." "Let's collect more data." Delay felt safer than denial, and it allowed people to avoid taking real ownership.
+Ananya sighed, knowing the resistance would likely come not as outright rejection, but as delay tactics - "Let's observe for another quarter," "Let's collect more data." Delay felt safer than denial, and it would allow people to avoid taking real ownership.
+
+Ananya knew the next step would be to build alliances in order to gain the trust and support needed for ASD to grow."
+
 
 ## Building Alliances
 
@@ -67,7 +70,7 @@ Later that week, Mira came home upset.
 
 Mira stared at the floor for a moment before speaking again.
 
-"Next month I will listen more," she said.
+"Next month I will listen more," she said with a sparkle in her eyes.
 
 "That's how we learn," Ananya smiled.
 
@@ -78,3 +81,6 @@ In the next quarterly review, ASD appeared differently — not as a pilot or exp
 Ananya closed her laptop and let her gaze drift around the empty dining room. No applause, just the steady hum of continuity. ASD felt like her child, but children do not grow in isolation. They require ecosystems — teachers, allies, translators. She had built the system. Now she had to build the environment that would let it survive.
 
 > Technical brilliance creates innovation. But political intelligence sustains it. Trust, like pattern detection, forms gradually — cluster by cluster, until hesitation softens and resistance becomes alignment.
+
+Ananya let out a deep breath, her eyes drawn to the family photos lining the shelves. Mira, her own coalition-builder, had lessons to teach. Ananya would need to draw on that same quiet strength, that patient wisdom, to shepherd ASD through the days ahead. With a renewed sense of purpose, she rose from the table, ready to face the challenges head-on.
+
