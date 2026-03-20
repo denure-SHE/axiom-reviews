@@ -91,7 +91,7 @@ Ananya wasn't convinced. For weeks she had been tracing transactions that approa
 
 She nodded slowly.
 
-> **Or perhaps we're calling signal noise because we don't yet know how to read it.**
+> Or perhaps we're calling signal noise because we don't yet know how to read it.
 
 After the meeting she reopened the data alone. Three medium-risk transactions appeared first. Then two weeks of inactivity. Another cluster — this time from a different geography. The velocity had shifted.
 
@@ -108,6 +108,7 @@ That night, the certainty broke.
 
 "You don't have to know everything," Ananya said softly. "You just have to stay."
 "Amma you dont know anything " Mira said with a crunched face. "Lets go to our old school ok Amma"
+
 "You just have to stay. Lets try for a week OK? "
 "What if I cry?"
 "You might."
@@ -117,28 +118,39 @@ That night, the certainty broke.
 A long pause followed.
 
 "Okay," she said finally. "I will go. But I don't promise I'll like it."
+
 "That's fair."
 
 ## The Philosophy
 
-The next morning Ananya sat across from Rajiv. She walked through the pattern — clusters of transactions hovering just below the escalation threshold, appearing in different regions, then fading before the system could connect them.
+The next morning Ananya sat across from Rajiv, her shoulders tense.
+"Mira was so upset this week," she began. "She said the new school feels too big, that she doesn't know when to listen or when to write." Ananya shook her head, a worried furrow in her brow. 
 
-"The system is not learning the rhythm. It's just reacting, after the fact."
+Rajiv listened quietly, his expression thoughtful. "Of course it is," he said gently. "It's a bigger world she's stepped into. But she'll learn the rhythm of it, just like we did."
 
-"So you're saying the model is missing something fundamental?"
+Ananya nodded, but her gaze drifted to the laptop between them.
+She turned the laptop toward him and walked through the pattern she had been tracing for weeks — clusters of transactions hovering just below the escalation threshold, appearing in different regions, then fading before the system could connect them.
 
-"Yes. I think we need to rebuild the core detection logic — create a system that can see where things are heading, before they actually breach."
+"That's what worries me. The system here - it's not learning the rhythm. It's just reacting, after the fact. The behavior is repetitive, but the system only catches it when something actually breaks the threshold."
+Rajiv didn’t answer immediately. He glanced once at the dashboard summary she had brought, then leaned back in his chair.
+Rajiv considered her words, his brow furrowing. "So you're saying the model is missing something fundamental?"
 
-"You know that kind of disruption won't be easy. Are you prepared to own that?"
+"Yes." Ananya leaned forward, her eyes intense. "It reacts too slowly to the behavior. I think we need to rebuild the core detection logic - create a system that can see where things are heading, before they actually breach."
 
-Ananya met his eyes steadily. She thought of Mira standing at the school gate — small but upright, moving forward despite the tremor in her voice.
+Rajiv was silent for a long moment, his gaze thoughtful. "You know that kind of disruption won't be easy," he said finally. "There will be pushback, uncertainty, temporary instability. Are you prepared to own that?"
 
-"Yes."
+Ananya met his eyes steadily. "Yes” She thought.  ‘Mira is facing that same uncertainty at school. She wants a school that never feels overwhelming and we want a system that never feels uncertain. I think both will have to learn.’
+Rajiv nodded slowly, the ghost of a smile tugging at his lips. "Then don't bring me a patch," he said. "Bring me a philosophy."
+The next morning, Mira stood at the door, still uncertain but willing to try. 
+The feeling wasn’t anywhere close to excitement. It was a compromise.
 
-Rajiv nodded slowly, the ghost of a smile at his lips.
+At work she began drafting the architecture. Ananya couldn't shake the sense that they were calling signal noise because they didn't yet know how to read it. 
+Just like Mira, the system needed to learn a new rhythm - one that could anticipate where things were heading, rather than just reacting after the fact.
+Ananya knew that rebuilding the core detection logic would be disruptive, filled with uncertainty and temporary instability. 
 
-"Then don't bring me a patch," he said. "Bring me a philosophy."
+But she also knew that both Mira and the risk engine would have to learn to navigate that uncertainty, to find the rhythm beneath the noise. It wouldn't be smooth, but it was the only way to see what others had missed.
 
-The next morning, Mira stood at the door — still uncertain, but willing to try. The feeling wasn't anywhere close to excitement. It was a compromise. At work, Ananya began drafting the architecture.
+Both journeys asked for the same thing. Longer learning curves required patience. Early discomfort demanded tolerance for uncertainty. 
 
-Both journeys asked for the same thing. Longer learning curves required patience. Early discomfort demanded tolerance for uncertainty. Ananya was prepared to own it, to stay the course, and to see both journeys through.
+Ananya was prepared to own it, to stay the course, and to see both journeys through.
+
