@@ -23,7 +23,7 @@ For eight years, the system had felt that way too. Stable. Reliable. Exactly as 
 
 That evening, Mira carefully laid her new school uniform across the bed. She smoothed the collar again and again, as if getting it right might help the morning go well.
 
-"New bag, pencils, notebooks — Amma, all packed," she said, lowering her voice slightly on the word *new*, as if it were something special.
+"New bag, pencils, notebooks — Amma, all packed," she said, lowering her voice slightly on the word new, as if it were something special.
 
 "Tomorrow I'll have so many new friends. And I'll know A to Z like Riya's brother."
 
@@ -47,27 +47,21 @@ Ananya smiled faintly, still half asleep. She kissed Mira’s forehead and held 
 
 “The thinking foot?” she murmured softly. “That’s very important… we can’t have that getting squished on your first day.”
 
-She sat up, easing Mira onto her lap, and turned the sock inside out, smoothing the seam with her fingers.
-
 “Let’s fix it properly,” she said gently. “Your thinking needs to work today.”
 
 "Yes. Right here." She poked the top of her foot. "All the good ideas come from here. If it's tight, I can't think good."
+She sat up, easing Mira onto her lap, and turned the sock inside out, smoothing the seam with her fingers.
 
-*Ananya went through her calendar mentally — 7:12 AM · 9 AM risk review meeting*
-
-"What ! ... The thinking foot," Ananya exclaimed,before she repeated thoughtfully. "That must be very important on the first day of school."
-
-"Yes. Right here." She poked the top of her foot. "All the good ideas come from here. If it's tight, I can't think good."
-
-*Ananya went through her calendar mentally — 7:12 AM · 9 AM risk review meeting*
-
-Ananya knelt on the floor, turned the socks inside out, and carefully smoothed the seam with her fingers. "Try now. We can't have the thinking foot distracted."
+"Try now. We can't have the thinking foot distracted."
 
 Mira walked two steps, then paused as if evaluating the outcome with scientific seriousness.
 
-"Better. Thinking is back."
+"Better Amma. Thinking is back."
 
 Breakfast took longer than usual, with reheated milk and a fresh bowl of cereal slowing things down and continuous chatter.
+
+*Ananya went through her calendar mentally — 7:12 AM · 9 AM risk review meeting*
+
 In the car, excitement returned in bursts.
 “Do you think the school is bigger than preschool?”
 "Yes, sweetie," Ananya replied, sensing her daughter's growing unease.
