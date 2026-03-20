@@ -53,11 +53,11 @@ The next morning began earlier than usual.
 
 <p class="dialogue">"They're tight on the thinking part of my foot. And if it's tight, I won't think properly today."</p>
 
-<p class="dialogue">"The thinking foot," Ananya repeated thoughtfully. "That must be very important on the first day of school."</p>
+<p class="dialogue">"What ! .... The thinking foot," Ananya almost exclaimed and then repeated thoughtfully. "That must be very important on the first day of school."</p>
 
 <p class="dialogue">"Yes. Right here." She poked the top of her foot. "All the good ideas come from here. If it's tight, I can't think good."</p>
 
-<p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.5em;border-left:2px solid var(--border);padding-left:0.75rem;">7:12 AM &nbsp;·&nbsp; 9 AM risk review meeting</p>
+<p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.5em;border-left:2px solid var(--border);padding-left:0.75rem;">Ananya mentally went through her calendar 7:12 AM &nbsp;·&nbsp; 9 AM risk review meeting</p>
 
 Ananya knelt on the floor, turned the socks inside out, and carefully smoothed the seam with her fingers. "Try now. We can't have the thinking foot distracted."
 
