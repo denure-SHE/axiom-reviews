@@ -66,9 +66,17 @@ Ananya knelt on the floor, turned the socks inside out, and carefully smoothed t
 
 Mira walked two steps, then paused as if evaluating the outcome with scientific seriousness.
 
-<p class="dialogue">"Better."</p>
+<p class="dialogue">"Better. Thinking is back."</p>
 
-As they approached the school building, Mira's confidence wavered. She slipped her hand into Ananya's, her eyes fixed on the ground.
+Breakfast took longer than usual, with reheated milk and a fresh bowl of cereal slowing things down and continuous chatter.
+In the car, excitement returned in bursts.
+<p class="dialogue"> “Do you think the school is bigger than preschool?” </p>
+<p class="dialogue"> "Yes, sweetie," Ananya replied, sensing her daughter's growing unease.</p>
+<p class="dialogue"> “And the swings?”
+“Probably higher.”
+At the red light, Mira suddenly sat straighter. </p>
+
+As they approached the towering school building, Mira's confidence wavered. She slipped her hand into Ananya's, her eyes fixed on the ground.
 
 <p class="dialogue">"But... it's big."</p>
 
@@ -97,6 +105,9 @@ After the meeting she reopened the data alone. Three medium-risk transactions ap
 <p class="standalone">What unsettled her was not what the engine flagged. It was what it almost missed.</p>
 
 <div class="scene-break"><span></span><span></span><span></span></div>
+
+That evening after school, Mira's hesitation had turned to distress. 
+<p class="dialogue">"Amma so many kids cry and want to go home. Even I wanted to go home," she said, her eyes misty. </p>
 
 That night, the certainty broke.
 
