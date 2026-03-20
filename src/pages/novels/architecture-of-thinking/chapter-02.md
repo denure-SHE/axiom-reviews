@@ -31,15 +31,18 @@ The first signal appeared three days later.
 
 Ananya noticed it while reviewing the transaction timeline after lunch. At first the cluster looked ordinary — three medium-risk activities appearing within a narrow window, each stopping just short of the escalation threshold.
 
-Ananya's shadow model had marked the cluster, assigning it a seventy-two percent confidence score. The number didn't mean certainty — the model was still learning what persistence looked like, and it hadn't yet observed enough sequences to speak clearly. and Ananya felt a familiar tug of intuition. 
+Ananya's shadow model had marked the cluster, assigning it a seventy-two percent confidence score. 
+>The number didn't mean certainty — the model was still learning what persistence looked like, and it hadn't yet observed enough sequences to speak clearly. 
 
-> The existing system would wait for a breach. But the shadow model was suggesting that behavior might already be forming.
+Ananya felt a familiar tug of intuition. The existing system would wait for a breach. But the shadow model was suggesting that behavior might already be forming.
 
-Ananya watched the pattern for a moment longer, considering the implications. Tracking trajectories instead of just breaches would create operational noise, but it might also catch a real threat before it happened. With a quiet nod, she made the decision to escalate the cluster to soft review, setting the process in motion without triggering a formal alert.
+Ananya watched the pattern for a moment longer, considering the implications, she made the decision to escalate the cluster to soft review, setting the process in motion without triggering a formal alert.
 
-By the end of the week, the pattern had flattened, with no breach following. At the next operations review, Ananya presented the outcome to the room, watching as Finance, Sales, Compliance, and Engineering weighed the costs and benefits of her approach. Finance spoke first, his tone calm but deliberate, noting that "Early containment carries cost." Investigation hours translated directly into operational strain, and the slide in front of them showed exactly that.
+By the end of the week, the pattern had flattened, with no breach following. At the next operations review, Ananya presented the outcome to the room, watching as Finance, Sales, Compliance, and Engineering weighed the costs and benefits of her approach. 
+Finance spoke first, his tone calm but deliberate, noting that "Early containment carries cost." Investigation hours translated directly into operational strain, and the slide in front of them showed exactly that.
 
-Ananya listened carefully, understanding the valid concerns, but also believing that the shadow model's ability to observe behavior rather than just events could make a real difference. "Tracking trajectories will create noise," she said, "but the trade-off is catching a real breach before it happens."
+Ananya listened carefully, understanding the valid concerns, but also believing that the shadow model's ability to observe behavior rather than just events could make a real difference. 
+>"Tracking trajectories will create noise," she said, "but the trade-off is catching a real breach before it happens."
 
 No one dismissed the idea outright, but the silence that followed carried calculation. Threshold systems were easy to defend. A breach either occurred or it did not. Probability required judgment.
 
@@ -69,10 +72,9 @@ Some signals needed time before their meaning became visible.
 ## The Proposal
 
 The next morning, as Ananya presented the new approach to the team, she could feel the room's uncertainty. But Rajiv's decision to run the shadow model in a quiet observational mode offered a chance to learn what early signals might actually look like, without the pressure of immediate escalation. 
-Ananya brought up the timeline on the screen. "This is how the system works now," she explained, pointing to the threshold line. "It only reacts when an event crosses this boundary, treating everything below it as background noise."
-
-She zoomed out to show the sequence she had been studying. "But real behavior doesn't just arrive as a single event. It builds up, testing the limits before adapting."
-The room studied the pattern quietly.
+Ananya brought up the timeline on the screen. "This is how the system works now," she explained, pointing to the threshold line. and then she zoomed out to show the sequence she had been studying. "But real behavior doesn't just arrive as a single event. It builds up, testing the limits before adapting."
+T
+he room studied the pattern quietly.
 
 Finance spoke first. "If we increase sensitivity, our investigation load rises. Operational costs follow."
 
@@ -109,8 +111,8 @@ The next morning Mira stood at the door with her bag already on her shoulders.
 
 "Ready?" Ananya asked.
 
-"I'll go," she said. "But I don't promise I'll like it."
+"Lets go," she said. 
 
-"That's fair."
+They walked toward the car together. At work the shadow model continued running quietly behind the primary system. 
 
-They walked toward the car together. At work the shadow model continued running quietly behind the primary system. Both journeys had begun the same way — with a few uncertain signals and the patience to see what they became.
+Both Ananya and Mira's journeys had begun the same way—with a few uncertain signals and the patience to see what they became
