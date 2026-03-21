@@ -11,7 +11,9 @@ themes: "Negotiation · Continuity · Balance"
 prev:
   title: "The Work After the Win"
   url: "/novels/architecture-of-thinking/chapter-07"
-next: null
+next:
+  title: "What Gets Handed Over"
+  url: "/novels/architecture-of-thinking/chapter-09"
 ---
 *Negotiating Continuity — Decisions That Must Hold Over Time*
 
