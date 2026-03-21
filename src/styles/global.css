@@ -88,7 +88,16 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
 
 /* READING BODY */
 .reading-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 0rem); }
-.reading-body > p:first-of-type::first-letter { font-family: var(--serif); font-size: 5.2rem; font-weight: 400; float: left; line-height: 0.78; margin-right: 0.12em; margin-top: 0.1em; color: var(--gold); }
+.reading-body > p:first-of-type:not(:has(> em:only-child))::first-letter {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 4.8rem;
+  font-weight: 400;
+  float: left;
+  line-height: 0.82;
+  margin-right: 0.1em;
+  margin-top: 0.06em;
+  color: var(--gold);
+}
 
 .reading-body p {
   font-family: 'EB Garamond', Georgia, serif;
@@ -101,10 +110,27 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
   word-spacing: 0.01em;
 }
 
-/* Timestamp: *italic only line* */
-.reading-body p:has(> em:only-child) {
+/* Chapter epigraph — first italic-only paragraph (subtitle under chapter title) */
+.reading-body > p:first-of-type:has(> em:only-child) {
+  font-family: 'EB Garamond', Georgia, serif !important;
+  font-size: clamp(1rem, 1.8vw, 1.12rem) !important;
+  font-style: italic !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  margin-bottom: 2em !important;
+  font-weight: 400 !important;
+  text-align: left;
+}
+.reading-body > p:first-of-type:has(> em:only-child) em { font-style: italic; }
+
+/* Timestamp — mid-body italic-only paragraph */
+.reading-body p:not(:first-of-type):has(> em:only-child) {
   font-family: var(--sans) !important;
-  font-size: 0.7rem !important;
+  font-size: 0.68rem !important;
   letter-spacing: 0.18em !important;
   text-transform: uppercase !important;
   color: var(--text-muted) !important;
@@ -114,7 +140,7 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
   font-style: normal !important;
   line-height: 1.5 !important;
 }
-.reading-body p:has(> em:only-child) em { font-style: normal; }
+.reading-body p:not(:first-of-type):has(> em:only-child) em { font-style: normal; }
 
 /* Scene break: * * * */
 .reading-body hr {
@@ -184,7 +210,16 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
 .novel-title-ref { font-family: var(--serif); font-style: italic; font-size: 0.9rem; color: var(--text-muted); }
 .chapter-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
 .chapter-label::before { content: ''; width: 24px; height: 1px; background: var(--gold-dim); display: block; }
-.chapter-title { font-family: 'EB Garamond', Georgia, serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 500; line-height: 1.15; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 2rem; }
+.chapter-title { font-family: 'EB Garamond', Georgia, serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 500; line-height: 1.15; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 0.6rem; }
+.chapter-subtitle {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+  font-weight: 400;
+}
 .chapter-meta-row { display: flex; align-items: center; gap: 2rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
 .meta-divider { width: 1px; height: 28px; background: var(--border); }
 .meta-item { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); line-height: 1.5; }

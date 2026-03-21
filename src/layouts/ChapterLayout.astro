@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
-const { title, chapterNum, chapterLabel, novel, novelSlug, date, themes, readingTime, prev, next } = frontmatter;
+const { title, chapterNum, chapterLabel, novel, novelSlug, date, themes, readingTime, prev, next, subtitle } = frontmatter;
 
 // ── CENTRAL TOC ──────────────────────────────────────────────────────────────
 // Add new chapters here only. All chapter pages update automatically.
@@ -58,6 +58,7 @@ const toc = ALL_CHAPTERS.map(ch => ({
         </div>
         <div class="chapter-label">{chapterLabel}</div>
         <h1 class="chapter-title">{title}</h1>
+        {subtitle && <p class="chapter-subtitle">{subtitle}</p>}
         <div class="chapter-meta-row">
           <div class="meta-item"><strong>Published</strong>{date}</div>
           <div class="meta-divider"></div>
