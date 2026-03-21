@@ -98,19 +98,23 @@ She walked into the war-room quietly.
 “I saw the email,” she said evenly.
 The delivery head Vikram nodded.
 “With market visibility increasing, we need tighter control,” he said. “Escalation decisions affect revenue perception.”
-"Escalation decisions affect model integrity," Ananya replied evenly. "I delegated operational validation, not decision philosophy."
+
+"Escalation decisions affect models integrity," Ananya replied evenly. "I delegated operational validation, not decision philosophy."
 
 The room shifted.
 “We’re not questioning philosophy,” he said carefully. “We’re safeguarding narrative.”
+
 She held his gaze.
 “Then let’s define governance clearly,” she said. “Advisory review remains with Engineering. Communication alignment sits with Delivery. Decision ownership stays with Risk Architecture.”
+
 There it was. Ownership, stated without raising her voice.
 He nodded slowly.
 “Fine,” he said. “But alignment must be documented.”
 “It will be.” For now, it held.
 
 
-As the competitor's press release circulated, Sales urged positioning. "No reactive announcements," Ananya said. “We demonstrate ours with performance and data. Give me some time.” Engineering nodded, Delivery looked restless. Credibility, not technology, would be scrutinized.
+As the competitor's press release circulated, Sales urged positioning. 
+"No reactive announcements," Ananya said. “We demonstrate ours with performance and data. Give me some time.” Engineering nodded, Delivery looked restless. Credibility, not technology, would be scrutinized.
 
 At home that evening, the strain surfaced more subtly.
 Mira worked through homework while Ananya skimmed competitor documentation.
@@ -121,13 +125,14 @@ Aarav sat across from them.
 She looked up. “It means scrutiny increases.”
 He shrugged. “You’ll manage.”
 The sentence was supportive. It was also distant.
+
 Later, while clearing the table, he added casually,
 “I confirmed travel next week. Two days.”
-She paused.
-“Next week is client integration review.”
+She paused. “Next week is client integration review.”
+
 “You’ve got a team now,” he said. “You don’t have to carry everything.”
 She smiled faintly.
-At work, delegating operational decisions had required careful negotiation to maintain her authority. But at home there was still an underlying assumption that she would handle everything.
+> At work, delegating operational decisions had required careful negotiation to maintain her authority. But at home there was still an underlying assumption that she would handle everything.
 
 That night, after Mira slept, Ananya reopened her laptop.
 Another internal message.
