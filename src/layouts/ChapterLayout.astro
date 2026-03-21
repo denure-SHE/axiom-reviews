@@ -27,6 +27,13 @@ const ALL_CHAPTERS = [
   { num: "17", title: "What Moves Without Authority",              slug: "chapter-17" },
   { num: "18", title: "When Clarity Threatens Someone",            slug: "chapter-18" },
 ];
+
+const currentSlug = Astro.url.pathname.split('/').pop();
+const toc = ALL_CHAPTERS.map(ch => ({
+  ...ch,
+  url: `/novels/architecture-of-thinking/${ch.slug}`,
+  current: ch.slug === currentSlug,
+}));
 // ─────────────────────────────────────────────────────────────────────────────
 ---
 
