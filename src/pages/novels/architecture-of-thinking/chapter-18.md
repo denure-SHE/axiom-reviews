@@ -11,9 +11,7 @@ themes: "Negotiation · Continuity · Balance"
 prev:
   title: "What Moves Without Authority"
   url: "/novels/architecture-of-thinking/chapter-17"
-next:
-  title: "Standing Where Meaning Forms"
-  url: "/novels/architecture-of-thinking/chapter-19"
+next: null
 ---
 ## Systems remove confusion. They also redraw territories.
 
