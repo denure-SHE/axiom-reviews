@@ -26,23 +26,37 @@ The message arrived before the alarm, disrupting the morning's invisible archite
 Ananya read it once and placed the phone down, listening to the quiet before everything began. Then she got up.
 
 By the time Mira entered the kitchen, Ananya had already changed three meetings and deferred one internal review. Her calendar glowed briefly on the counter before she locked it again.
+
 “Amma… is dance class today?” Mira asked, climbing onto her chair.
 “Tomorrow,” Ananya replied.
+
 Mira nodded still sleepy.
+
 From the bedroom, Aarav’s voice floated out.
+
 “I have an early call. Might skip breakfast.”
 “That’s okay.”
+
 He emerged moments later, phone pressed to his ear.
 “You’ll manage today?” he asked, covering the mic.
 “Yes.” She didn’t pause. She rarely did.
 He mouthed thanks and disappeared back into the room.
+
 Ananya cracked eggs into a bowl, stirred them slowly, and poured them onto the pan.
+
 “Amma, Aunty isn’t coming?” Mira asked.
+
 “No.”
+
 “Who’ll pick me up?”
+
 “I will.”
+
 “After your office? You’ll be late, Amma?”
-“Yes  … I’ll start early,” Ananya said, a little quicker than she meant to. Mira nodded, satisfied, and went back to her soft toys. The morning rearranged itself quietly.
+
+“Yes  … I’ll start early,” Ananya said, a little quicker than she meant to. Mira nodded, satisfied, and went back to her soft toys. 
+
+The morning rearranged itself quietly.
 
 
 At a traffic signal, Mira traced shapes in the fogged window.
