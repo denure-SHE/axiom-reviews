@@ -17,7 +17,8 @@ next:
 ---
 *Efforts to Making Something Survive* 
 
-As Ananya reviewed the latest quarterly numbers, unease settled in. The numbers were strong, but she knew that wouldn’t be enough. Good metrics didn’t automatically become priority.
+As Ananya reviewed the latest quarterly numbers, unease settled in.
+The numbers were strong, but she knew that wouldn’t be enough. Good metrics didn’t automatically become priority.
 If ASD was going to grow, people would have to trust it — and trust their judgment in using it.
 
 Ananya sighed, knowing the resistance would likely come not as outright rejection, but as delay tactics - "Let's observe for another quarter," "Let's collect more data." Delay felt safer than denial. It let people avoid taking ownership.
