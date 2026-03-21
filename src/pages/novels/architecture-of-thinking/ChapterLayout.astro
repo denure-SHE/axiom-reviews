@@ -1,0 +1,148 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+const { title, chapterNum, chapterLabel, novel, novelSlug, date, themes, readingTime, prev, next } = frontmatter;
+
+// ── CENTRAL TOC ──────────────────────────────────────────────────────────────
+// Add new chapters here only. All chapter pages update automatically.
+const ALL_CHAPTERS = [
+  { num: "—",  title: "Introduction",                              slug: "introduction" },
+  { num: "01", title: "The Pattern Beneath the Noise",             slug: "chapter-01" },
+  { num: "02", title: "Signals",                                   slug: "chapter-02" },
+  { num: "03", title: "The Cost of Seeing Earlier",                slug: "chapter-03" },
+  { num: "04", title: "When Recognition Invites Resistance",       slug: "chapter-04" },
+  { num: "05", title: "Quiet Coalitions",                          slug: "chapter-05" },
+  { num: "06", title: "When the Future Is Seen Before It Happens", slug: "chapter-06" },
+  { num: "07", title: "The Work After the Win",                    slug: "chapter-07" },
+  { num: "08", title: "The Space Between Yes and No",              slug: "chapter-08" },
+  { num: "09", title: "What Gets Handed Over",                     slug: "chapter-09" },
+  { num: "10", title: "Lines That Cannot Blur",                    slug: "chapter-10" },
+  { num: "11", title: "The Space Between Holding and Letting Go",  slug: "chapter-11" },
+  { num: "12", title: "What We Call Strength",                     slug: "chapter-12" },
+  { num: "13", title: "Where Power Sits",                          slug: "chapter-13" },
+  { num: "14", title: "What Gets Named",                           slug: "chapter-14" },
+  { num: "15", title: "Who Gets to Decide",                        slug: "chapter-15" },
+  { num: "16", title: "Order in the Middle of Noise",              slug: "chapter-16" },
+  { num: "17", title: "What Moves Without Authority",              slug: "chapter-17" },
+  { num: "18", title: "When Clarity Threatens Someone",            slug: "chapter-18" },
+];
+// ─────────────────────────────────────────────────────────────────────────────
+---
+
+<BaseLayout title={`${chapterLabel}: ${title}`} description={`${title} — ${novel}`}>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div style="padding: 0.75rem clamp(1.5rem,5vw,4rem); border-bottom: 1px solid var(--border); display:flex; align-items:center; gap:0.6rem; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted);">
+    <a href="/novels" style="color:var(--text-muted); transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Novels</a>
+    <span style="color:var(--border);">/</span>
+    <a href={`/novels/${novelSlug}`} style="color:var(--text-muted); transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">{novel}</a>
+    <span style="color:var(--border);">/</span>
+    <span style="color:var(--text-secondary);">{chapterLabel}</span>
+    <span style="margin-left:auto; font-size:0.65rem; color:var(--text-muted);">{readingTime} min read</span>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="main-content">
+      <div class="chapter-hero animate-up">
+        <div class="novel-label">
+          <span class="novel-tag">Novel · {chapterLabel}</span>
+          <span class="novel-title-ref">{novel}</span>
+        </div>
+        <div class="chapter-label">{chapterLabel}</div>
+        <h1 class="chapter-title">{title}</h1>
+        <div class="chapter-meta-row">
+          <div class="meta-item"><strong>Published</strong>{date}</div>
+          <div class="meta-divider"></div>
+          <div class="meta-item"><strong>Novel</strong>{novel}</div>
+          {themes && <><div class="meta-divider"></div><div class="meta-item"><strong>Themes</strong>{themes}</div></>}
+        </div>
+      </div>
+
+      <div class="ornament">
+        <div class="ornament-line"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-line"></div>
+      </div>
+
+      <div class="reading-body">
+        <slot />
+      </div>
+
+      <div class="chapter-end">
+        <div class="end-ornament">
+          <div class="end-ornament-line"></div>
+          <div class="end-ornament-dots"><span></span><span></span><span></span></div>
+          <div class="end-ornament-line"></div>
+        </div>
+        <div class="chapter-nav">
+          {prev
+            ? <a href={prev.url} class="chapter-nav-card prev">
+                <span class="nav-dir">← Previous</span>
+                <span class="nav-chapter-title">{prev.title}</span>
+              </a>
+            : <div class="chapter-nav-card prev" style="opacity:0.3;cursor:default;">
+                <span class="nav-dir">← Previous</span>
+                <span class="nav-chapter-title">No previous chapter</span>
+              </div>
+          }
+          {next
+            ? <a href={next.url} class="chapter-nav-card next">
+                <span class="nav-dir">Next Chapter →</span>
+                <span class="nav-chapter-title">{next.title}</span>
+              </a>
+            : <div class="chapter-nav-card next" style="opacity:0.3;cursor:default;">
+                <span class="nav-dir">Next Chapter →</span>
+                <span class="nav-chapter-title">Coming soon</span>
+              </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <span class="sidebar-label">This Novel</span>
+        <div class="sidebar-novel-title">{novel}</div>
+        <div class="sidebar-novel-sub">On Judgment, Machines, and Reasoning</div>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-label">Contents</span>
+        <ul class="sidebar-toc">
+          {toc.map((item) => (
+            <li class={item.current ? 'active' : ''}>
+              <a href={item.url}>
+                <span class="toc-num">{item.num}</span>
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-label">Novel</span>
+        <a href={`/novels/${novelSlug}`} style="font-size:0.82rem;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim);padding-bottom:2px;">← Back to novel page</a>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-label">Share</span>
+        <div class="share-links">
+          <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy link',1500)})">Copy link</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const scrolled = doc.scrollTop || document.body.scrollTop;
+      const total = doc.scrollHeight - doc.clientHeight;
+      const bar = document.getElementById('progressBar');
+      if (bar) bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+    });
+  </script>
+</BaseLayout>

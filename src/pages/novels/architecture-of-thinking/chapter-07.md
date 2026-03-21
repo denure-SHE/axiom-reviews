@@ -6,7 +6,7 @@ chapterNum: 7
 novel: "The Architecture of Thinking"
 novelSlug: "architecture-of-thinking"
 date: "2025"
-readingTime: 20
+readingTime: 10
 themes: "Integration · Credibility · Recognition"
 prev:
   title: "When the Future Is Seen Before It Happens"
@@ -15,6 +15,8 @@ next:
   title: "The Space Between Yes and No"
   url: "/novels/architecture-of-thinking/chapter-08"
 ---
+*Momentum Needs Structure, Recognition is energizing. Integration, however, is sobering.* 
+
 In the days after the client presentation, something shifted in the office — subtle, but unmistakable
 
 There was pride, but also pressure. ASD no longer needed defending. It was a system that now had to hold up in the real world.
@@ -82,6 +84,7 @@ Ananya knelt beside her.
 Mira considered this carefully. Then she shrugged.
 
 “Same thing.” She said it with certainty — and reached for the cake.
+
 * * *
 
 Later that night Ananya stepped onto the balcony while Mira attempted to teach several stuffed animals the alphabet with impressive authority.

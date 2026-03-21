@@ -6,7 +6,7 @@ chapterNum: 8
 novel: "The Architecture of Thinking"
 novelSlug: "architecture-of-thinking"
 date: "2025"
-readingTime: 20
+readingTime: 10
 themes: "Negotiation · Continuity · Balance"
 prev:
   title: "The Work After the Win"

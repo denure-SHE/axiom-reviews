@@ -6,7 +6,7 @@ chapterNum: 1
 novel: "The Architecture of Thinking"
 novelSlug: "architecture-of-thinking"
 date: "2025"
-readingTime: 18
+readingTime: 10
 themes: "Risk · Judgment · Family"
 prev:
   title: "Introduction"

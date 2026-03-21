@@ -6,7 +6,7 @@ chapterNum: 5
 novel: "The Architecture of Thinking"
 novelSlug: "architecture-of-thinking"
 date: "2025"
-readingTime: 20
+readingTime: 10
 themes: "Alliances · Trust · Organizational Change"
 prev:
   title: "When Recognition Invites Resistance"
@@ -15,6 +15,8 @@ next:
   title: "When the Future Is Seen Before It Happens"
   url: "/novels/architecture-of-thinking/chapter-06"
 ---
+*Efforts to Making Something Survive* 
+
 As Ananya reviewed the latest quarterly numbers, unease settled in.
 The numbers were strong, but she knew that wouldn’t be enough. Good metrics didn’t automatically become priority.
 If ASD was going to grow, people would have to trust it — and trust their judgment in using it.
@@ -79,8 +81,7 @@ In the next quarterly review, ASD appeared differently — not as a pilot or exp
 
 Ananya closed her laptop and let her gaze drift around the empty dining room. 
 
->ASD felt like her child, but children do not grow in isolation. They require ecosystems — teachers, allies, translators. She had built the system. Now she had to build the environment that would let it survive.
+> ASD felt like her child, but children do not grow in isolation. They require ecosystems — teachers, allies, translators. She had built the system. Now she had to build the environment that would let it survive.
 
 Technical brilliance creates innovation and political intelligence sustains it. Trust didn’t arrive all at once. It built slowly — conversation by conversation, decision by decision.
-
 

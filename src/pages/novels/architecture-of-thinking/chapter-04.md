@@ -6,7 +6,7 @@ chapterNum: 4
 novel: "The Architecture of Thinking"
 novelSlug: "architecture-of-thinking"
 date: "2025"
-readingTime: 20
+readingTime: 10
 themes: "Recognition · Politics · Leadership"
 prev:
   title: "The Cost of Seeing Earlier"
@@ -15,6 +15,8 @@ next:
   title: "Quiet Coalitions"
   url: "/novels/architecture-of-thinking/chapter-05"
 ---
+*The Politics of Being Early* 
+
 Recognition came quietly — not as applause, but as a slide halfway through the quarterly review.
 
 Ananya noticed it immediately:

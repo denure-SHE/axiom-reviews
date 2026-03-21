@@ -6,7 +6,7 @@ chapterNum: 6
 novel: "The Architecture of Thinking"
 novelSlug: "architecture-of-thinking"
 date: "2025"
-readingTime: 20
+readingTime: 10
 themes: "Client Presentation · Strategic Differentiation"
 prev:
   title: "Quiet Coalitions"
@@ -15,19 +15,19 @@ next:
   title: "The Work After the Win"
   url: "/novels/architecture-of-thinking/chapter-07"
 ---
+*Strategic Differentiation Under Scrutiny* 
 
 As Ananya set up her laptop, a brief flicker of irony crossed her mind. ASD, the technology solution she had poured her heart into, had been questioned and scrutinized internally for months. Yet now, here she was, about to showcase its capabilities to the client's risk committee. With three weeks of intensive preparation behind her, Ananya took a deep breath, ready to show what they had built.
 
->"Early Risk Intelligence — Beyond Threshold Monitoring" 
+> "Early Risk Intelligence — Beyond Threshold Monitoring" 
 
 It held the center of the opening slide. Screens filled the room, tiled across time zones. The client's risk committee dialed in with their usual composure: precise questions, measured skepticism, professional caution.
-
 
 The sales team began with the usual talking points, then pivoted.
 
 "We'd like to show you an intelligence layer we've been piloting internally," the Sales director said. "A framework that identifies behavioral drift before exposure escalates."
 
->The word lingered. Not breach. Not violation. Drift. 
+> The word lingered. Not breach. Not violation. Drift. 
 
 Ananya gestured to the screen. Instead of red alert boxes, a longitudinal timeline appeared — confidence curves rising gradually over weeks. Cluster visualization. Geographic dispersion mapping - patterns stretching across time — movements spreading across regions, slowly taking shape.
 
