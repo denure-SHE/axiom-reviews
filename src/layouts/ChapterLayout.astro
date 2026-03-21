@@ -16,14 +16,17 @@ const ALL_CHAPTERS = [
   { num: "06", title: "When the Future Is Seen Before It Happens", slug: "chapter-06" },
   { num: "07", title: "The Work After the Win",                    slug: "chapter-07" },
   { num: "08", title: "The Space Between Yes and No",              slug: "chapter-08" },
+  { num: "09", title: "What Gets Handed Over",                     slug: "chapter-09" },
+  { num: "10", title: "Lines That Cannot Blur",                    slug: "chapter-10" },
+  { num: "11", title: "The Space Between Holding and Letting Go",  slug: "chapter-11" },
+  { num: "12", title: "What We Call Strength",                     slug: "chapter-12" },
+  { num: "13", title: "Where Power Sits",                          slug: "chapter-13" },
+  { num: "14", title: "What Gets Named",                           slug: "chapter-14" },
+  { num: "15", title: "Who Gets to Decide",                        slug: "chapter-15" },
+  { num: "16", title: "Order in the Middle of Noise",              slug: "chapter-16" },
+  { num: "17", title: "What Moves Without Authority",              slug: "chapter-17" },
+  { num: "18", title: "When Clarity Threatens Someone",            slug: "chapter-18" },
 ];
-
-const currentSlug = Astro.url.pathname.split('/').pop();
-const toc = ALL_CHAPTERS.map(ch => ({
-  ...ch,
-  url: `/novels/architecture-of-thinking/${ch.slug}`,
-  current: ch.slug === currentSlug,
-}));
 // ─────────────────────────────────────────────────────────────────────────────
 ---
 
