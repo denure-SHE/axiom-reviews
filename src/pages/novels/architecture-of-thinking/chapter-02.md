@@ -28,7 +28,7 @@ To anyone else, the dashboard looked the same. But to Ananya, it had become two 
 
 * * *
 
-The first signal appeared three days later.
+The first signal appeared four weeks later.
 
 Ananya noticed it while reviewing the transaction timeline after lunch. At first the cluster looked ordinary — three medium-risk activities appearing within a narrow window, each stopping just short of the escalation threshold.
 
@@ -40,6 +40,7 @@ Ananya felt a familiar tug of intuition. The existing system would wait for a br
 Ananya watched the pattern for a moment longer, considering the implications, she made the decision to escalate the cluster to soft review, setting the process in motion without triggering a formal alert.
 
 By the end of the week, the pattern had flattened, with no breach following. At the next operations review, Ananya presented the outcome to the room, watching as Finance, Sales, Compliance, and Engineering weighed the costs and benefits of her approach. 
+
 Finance spoke first, his tone calm but deliberate, noting that "Early containment carries cost." Investigation hours translated directly into operational strain, and the slide in front of them showed exactly that.
 
 Ananya listened carefully, understanding the valid concerns, but also believing that the shadow model's ability to observe behavior rather than just events could make a real difference. 

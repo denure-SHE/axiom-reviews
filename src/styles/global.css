@@ -130,15 +130,18 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
 /* Timestamp — mid-body italic-only paragraph */
 .reading-body p:not(:first-of-type):has(> em:only-child) {
   font-family: var(--sans) !important;
-  font-size: 0.68rem !important;
-  letter-spacing: 0.18em !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.14em !important;
   text-transform: uppercase !important;
-  color: var(--text-muted) !important;
-  border-left: 2px solid var(--border);
-  padding-left: 0.75rem;
-  margin-bottom: 1.5em !important;
+  color: var(--text-secondary) !important;
+  background: #f0ece6 !important;
+  border-left: 3px solid var(--gold-dim) !important;
+  padding: 0.5rem 0.85rem !important;
+  margin: 0.5em 0 1.5em !important;
   font-style: normal !important;
-  line-height: 1.5 !important;
+  line-height: 1.6 !important;
+  display: block !important;
+  border-radius: 0 3px 3px 0 !important;
 }
 .reading-body p:not(:first-of-type):has(> em:only-child) em { font-style: normal; }
 
@@ -180,19 +183,20 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
 
 /* Blockquote: > text */
 .reading-body blockquote {
-  border-left: 2px solid var(--gold-dim);
-  padding: 0 0 0 1.5rem;
+  border-left: 3px solid #c8b89a;
+  padding: 0.15em 0 0.15em 1.75rem;
   margin: 2.5em 0;
   background: transparent;
 }
 .reading-body blockquote p {
-  font-family: var(--serif) !important;
+  font-family: 'EB Garamond', Georgia, serif !important;
   font-style: italic !important;
-  color: var(--gold) !important;
-  font-size: clamp(1.1rem, 2vw, 1.22rem) !important;
-  line-height: 1.7 !important;
+  color: #2c2420 !important;
+  font-size: clamp(1.18rem, 2vw, 1.32rem) !important;
+  line-height: 1.72 !important;
   margin-bottom: 0 !important;
   font-weight: 400 !important;
+  letter-spacing: 0.005em !important;
 }
 
 /* Insight box: > **bold** */
