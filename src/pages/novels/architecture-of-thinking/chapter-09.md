@@ -89,6 +89,7 @@ At the office, she did not call a meeting.
 Ananya opened the ASD dashboard. Minor drifts. Contained.
 She sent instructions:
 > To Raghav: Validate confidence band stability on velocity layer. No new logic. Tighten interpretation notes.
+
 > To Legal: Review competitor announcement. Any IP exposure risk?
 
 An email circulated about centralizing escalation authority. It was to achieve tighter control as the message claimed. Ananya's jaw tightened. Delegation had created space. And someone had stepped into it.
@@ -124,6 +125,7 @@ At home that evening, the strain surfaced more subtly.
 Mira worked through homework while Ananya skimmed competitor documentation.
 Aarav sat across from them.
 “You’re still on that?” he asked lightly.
+
 “They launched something similar.”
 “That’s good, no?” he said. “Means you were right.”
 She looked up. “It means scrutiny increases.”
@@ -142,9 +144,12 @@ That night, after Mira slept, Ananya reopened her laptop.
 Another internal message.
 > If competitor secures first public case study, perception may shift quickly.
 She drafted a short note to leadership:
-> Accelerate client case validation documentation. Maintain phased release discipline. Avoid public comparison language. Reinforce governance clarity internally
+> Accelerate client case validation documentation. 
+> Maintain phased release discipline. 
+> Avoid public comparison language. 
+> Reinforce governance clarity internally
 
-Ananya paused, her fingers hovering over the keyboard. Delegation was working, yes. But it had also introduced a new layer of scruity. Scale was growing. So was visibility.
+Ananya paused, her fingers hovering over the keyboard. Delegation was working, but it had also introduced a new layer of scruity. Scale was growing. So was visibility.
 And at home, partnership still required recalibration.
 
 * * *
@@ -159,10 +164,10 @@ Behind her, Aarav picked up his laptop bag.
 “You’ll manage,” he said again.
 She nodded.
 
-Manage. The word followed her. At work, it meant trusting others without losing authority. At home, it meant holding things together without saying so. In the market, moving before competitors defined the story.
+Manage. The word followed her. At work, it meant trusting others without losing authority. At home, it meant holding things together without saying so. 
 
 * * *
 
-She would still have to hold the line, not by doing everything, but by knowing what she could let go. Speed had belonged to her. Scale now required others. And others, she was learning, come with opinions, incentives, and limits.
+She would still have to hold the line, not by doing everything, but by knowing what she could let go. Speed had belonged to her. Scale required others. And others, she was learning, come with opinions, incentives, and limits.
 
-Leadership was no longer about building something. It was about deciding what must remain hers - and what must be handed over without losing direction. Ananya stepped into the day, knowing one thing clearly: scale tested not her intelligence, but her steadiness.
+Leadership was no longer about building something, it was also about what must be handed over without losing direction. Ananya stepped into the day, knowing one thing clearly: scale tested not her intelligence, but her steadiness.

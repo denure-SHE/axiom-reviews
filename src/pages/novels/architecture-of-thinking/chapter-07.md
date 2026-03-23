@@ -17,9 +17,9 @@ next:
 ---
 *Momentum Needs Structure, Recognition is energizing. Integration, however, is sobering.* 
 
-In the days after the client presentation, something shifted in the office — subtle, but unmistakable
+In the days after the client presentation, something shifted in the office — subtle, but unmistakable. There was pride, but also pressure. 
 
-There was pride, but also pressure. ASD no longer needed defending. It was a system that now had to hold up in the real world.
+ASD no longer needed defending. It was a system that now had to hold up in the real world.
 
 Ananya gathered the integration team in one of the glass meeting rooms that had become their unofficial war room. As the whiteboards filled with timelines, checkpoints, and dependencies, she watched the architecture turn into steps.
 

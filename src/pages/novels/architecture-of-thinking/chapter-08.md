@@ -59,19 +59,9 @@ She poured cereal, warmed the milk, cut fruit slightly uneven — the way Mira l
 
 "You can still sit next to them," Ananya said.
 
-"The mornings are the hardest," Mira said. "When everyone is checking friend 'vibes', like they're deciding yes or no. I don't like that, not knowing where I fit in."
+"Amma " Mira said. “Everyone already has their place. I don’t know where mine is.”
 
-Ananya smiled faintly.
-
-"Aha ... And after lunch?"
-
-Mira considered.
-
-"After lunch is okay. After lunch people forget."
-
-Ananya nodded slowly.
-
-"What if you try until lunch? If it still feels wrong, we talk to your teacher together."
+“What if you try till lunch?” she asked. “If it still feels bad, we talk to your teacher together.”
 
 "Together-together?" Mira asked.
 

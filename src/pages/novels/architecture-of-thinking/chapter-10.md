@@ -36,6 +36,9 @@ Then she nodded.
 “Okay. Amma Then you’ll be there when I sleep.”
 “Yes.”
 That part, at least, she could promise.
+Ananya reached for her phone and sent a quick message.
+
+>'Can you come in this evening? Just for three hours.'
 
 * * *
 
@@ -52,6 +55,7 @@ It was explainable. But the room wasn’t looking for explanation.
 
 She felt the shift. Not accusation. But closer than that.
 Ananya leaned forward.
+
 “The model flagged the variance,” she said evenly. “What it did not do was escalate prematurely. That distinction matters.”
 
 A delivery manager spoke next.
@@ -73,6 +77,13 @@ The air tightened — not because she raised her voice, but because she did not.
 
 No one contradicted her. Disagreement, however, remained alive in the room.
 
+A message flashed on her phone.
+
+>I can come by 4. Will stay till 7.
+
+Ananya glanced at it, then locked her screen.
+
+The evening, at least, would hold.
 * * *
 
 The debate evolved. Sales wanted a statement strong enough to steady client confidence. Legal wanted language cautious enough to protect liability exposure. Engineering wanted time to revalidate the drift-adjusted weighting. Delivery wanted operational stability. Each position was defensible. Collectively, they were incompatible.
@@ -93,7 +104,12 @@ Ananya stood and walked to the board. She wrote three lines:
 > What the system guarantees
 > What the system is still learning
 
-The room quieted. "We're blending these," she said calmly. "That's why this feels like instability." She circled the first line. "The system detected a variance condition. That is proof of functionality." She underlined the second. "The system guarantees structured escalation tiers – not immunity from data drift." Then the third. "The system is still learning adaptive weighting under new volume conditions. That is disclosed in governance." She turned back to them. "Conflict ends when definitions are separated."
+The room quieted. "We're blending these," she said calmly. "That's why this feels like instability." 
+She circled the first line. "The system detected a variance condition. That is proof of functionality." 
+She underlined the second. "The system guarantees structured escalation tiers – not immunity from data drift." 
+Then the third. "The system is still learning adaptive weighting under new volume conditions. That is disclosed in governance." 
+
+She turned back to them. "Conflict ends when definitions are separated."
 
 She rewrote the client note directly on the board:
 
@@ -108,12 +124,38 @@ Conflict did not vanish. It aligned. The decision shifted from opinion to langua
 
 * * *
 
-In the afternoon, a revised presentation deck circulated for client briefing. Her name was absent from the core solution architecture slide. She stared at it for a moment longer than necessary. This was not oversight. It was repositioning. Delegation creates space. And someone always steps into it.
-She replied without adornment. "Please update Slide 7 to reflect ownership of the ASD risk framework and algorithm design. Accuracy matters." No apology. No escalation.
-Ten minutes later, the slide was corrected. Authority rarely raises its voice, it becomes precise.
-By evening, fatigue settled into her shoulders like a quiet weight. When she opened the door at home, Mira ran toward her. "Amma! You took so long." Ananya knelt and held her tighter than usual. For a moment, the algorithm disappeared. The room politics dissolved. For a moment, only this mattered: she was there.
+In the afternoon, a revised presentation deck circulated for client briefing.
+
+Her name was missing from the core solution architecture slide.
+
+Ananya looked at it a moment longer than necessary. Not oversight, it looked like repositioning.
+
+Delegation creates space. And someone had stepped into it.
+
+She replied without adornment.
+
+“Please update Slide 7 to reflect ownership of the ASD risk framework and algorithm design. Accuracy matters.”
+
+No apology. No escalation. Ten minutes later, the slide was corrected.
+
+Authority did not need volume. It needed precision.
 
 * * *
+
+By evening, fatigue settled into her shoulders.
+
+When she opened the door, Mira ran toward her.
+
+“Amma! You took so long.”
+
+Ananya knelt and held her a little tighter than usual.
+
+For a moment, the algorithm receded.
+
+The room, the conversations, the positioning — all of it fell away.
+
+For a moment, only this mattered. She was there.
+
 
 “Did you have a good day?” Mira asked.
 Ananya thought about it. “I stood where I should,” she said softly.
