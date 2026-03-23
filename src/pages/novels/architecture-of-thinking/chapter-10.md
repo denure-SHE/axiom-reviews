@@ -101,12 +101,17 @@ The problem was no longer the anomaly. It was definition.
 Ananya stood and walked to the board. She wrote three lines:
 
 > What the system detected
+
 > What the system guarantees
+
 > What the system is still learning
 
 The room quieted. "We're blending these," she said calmly. "That's why this feels like instability." 
+
 She circled the first line. "The system detected a variance condition. That is proof of functionality." 
+
 She underlined the second. "The system guarantees structured escalation tiers – not immunity from data drift." 
+
 Then the third. "The system is still learning adaptive weighting under new volume conditions. That is disclosed in governance." 
 
 She turned back to them. "Conflict ends when definitions are separated."
