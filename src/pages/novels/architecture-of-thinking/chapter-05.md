@@ -18,7 +18,7 @@ next:
 *Efforts to Making Something Survive* 
 
 As Ananya reviewed the latest quarterly numbers, unease settled in.
-The numbers were strong, but she knew that wouldn’t be enough. Good metrics didn’t automatically become priority.
+The numbers were strong, but she knew that wouldn’t be enough. Good metrics didn’t automatically translate to getting priority.
 If ASD was going to grow, people would have to trust it — and trust their judgment in using it.
 
 Ananya sighed, knowing the resistance would likely come not as outright rejection, but as delay tactics - "Let's observe for another quarter," "Let's collect more data." Delay felt safer than denial. It let people avoid taking ownership.
@@ -39,17 +39,17 @@ With sales, she positioned ASD as a tool for demonstrating client intelligence, 
 
 "They don't ask," Ananya replied, "because they haven't seen it yet."
 
-She adjusted the language carefully. Instead of calling an account suspicious, she described the behavior as still evolving. TThe shift was subtle but important. It made the discussion feel less like an accusation and more like a problem the system and the client could examine together. Sales did not embrace it immediately. But they stopped resisting it.
+She adjusted the language carefully. Instead of calling an account suspicious, she described the behavior as still evolving. The shift was subtle but important. It made the discussion feel less like an accusation and more like a problem the system and the client could examine together. Sales did not embrace it immediately. But they stopped resisting it.
 
 Compliance would require something different. Ananya could sense the fear beneath their questions about defending "probabilistic escalation under audit." So she worked with Engineering to make the system easier to explain — showing how decisions formed, step by step, and how they could be governed at different levels.
 
-> TAs she listened, Ananya realized the hesitation wasn’t just technical. The old system had been simple — clear lines, clear responsibility. ASD asked for judgment. That made people uneasy.
+> As she listened, Ananya realized the hesitation wasn’t just technical. The old system had been simple — clear lines, clear responsibility. ASD asked for judgment. That made people uneasy.
 
 In a leadership meeting, the quiet question surfaced: "If ASD detects a potential issue but we act on it and it turns out to be nothing, who takes responsibility for that?"
 
 Rather than getting defensive, Ananya walked them through the graduated governance tiers, acknowledging their concern as she explained how the system was designed to protect both the technology and the people behind it.
 
-She built informal alliances, making ASD feel like “our evolving capability” rather than her idea alone. People resisted it less when it felt shared.s
+She built informal alliances, making ASD feel like “our evolving capability” rather than her idea alone. People resisted it less when it felt shared.
 
 * * *
 

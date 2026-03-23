@@ -25,9 +25,8 @@ Ananya noticed it immediately:
 
 It sat between two familiar sections, presented as though it had always belonged there.
 
-No one spoke her name. The slide moved on as if the capability had emerged on its own.
+Ananya noticed what wasn’t there — her name. She said nothing. No one spoke her name. The slide moved on as if the capability had emerged on its own.
 
-Ananya noticed what wasn’t there — her name. She said nothing.
 The case study that followed detailed how ASD had detected and addressed a developing risk issue before it escalated. Leadership leaned forward as the next slide quantified the outcome.
 
 > **Three weeks earlier detection. Reduced downstream damage. Exposure avoided.**

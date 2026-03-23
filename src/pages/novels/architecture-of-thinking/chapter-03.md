@@ -136,9 +136,9 @@ The relief wasn’t triumph. It was quieter than that — like being able to bre
 
 That evening, Mira sat at the table, carefully coloring inside the lines as she described distributing books in class.
 
-“Teacher said I do it carefully,” she said, focused on the edge of a bright blue shape.
+“Teacher said I do it carefully” she said, focused on the edge of a bright blue shape.
 
-She looked up. “Does your work have patterns like my books?”
+She looked up. “Amma , Does your work have patterns like my books?”
 
 Ananya smiled, brushing her hair gently.
 
