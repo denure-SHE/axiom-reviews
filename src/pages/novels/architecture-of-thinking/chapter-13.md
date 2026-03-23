@@ -13,7 +13,7 @@ prev:
   url: "/novels/architecture-of-thinking/chapter-12"
 next:
   title: "What Gets Named"
-  url: "/novels/architecture-of-thinking/chapter-14"
+  url: "/novels/architecture-of-thinking/chapter-13"
 ---
 ## Strong Leaders Compete on Outcomes; Insecure Leaders Compete on Influence
 
