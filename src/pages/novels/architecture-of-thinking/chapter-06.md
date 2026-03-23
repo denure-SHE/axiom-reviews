@@ -109,14 +109,13 @@ Later that night, Aarav placed a cup of tea beside her laptop.
 
 "You look tired?" he said. 
 
-"I think it’s starting to come together."
-She leaned back in the chair. “I think we’re getting somewhere.”
+"I think it’s starting to come together." She leaned back in the chair. 
 “At work?”
-“At work,” she said, then added after a moment, “And maybe here too.”
+“At work,” she said, then added after a moment, Looking at Mira lecturing her soft toys “And maybe here too.”
 
 "New things always look a bit chaotic at first."
 
-"That's not very comforting while you're in the middle of it."
+"That's not very comforting while you're in the middle of it." 
 
 "No," he laughed. "It usually means you’re on the right track."
 
