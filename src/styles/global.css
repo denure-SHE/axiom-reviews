@@ -113,17 +113,17 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
 /* Chapter epigraph — first italic-only paragraph (subtitle under chapter title) */
 .reading-body > p:first-of-type:has(> em:only-child) {
   font-family: 'EB Garamond', Georgia, serif !important;
-  font-size: clamp(1.2rem, 2vw, 1.4rem) !important;
+  font-size: clamp(1.3rem, 2.5vw, 1.55rem) !important;
   font-style: italic !important;
   color: var(--text-primary) !important;
-  line-height: 1.55 !important;
-  letter-spacing: 0em !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.01em !important;
   text-transform: none !important;
   border-left: none !important;
   padding-left: 0 !important;
   margin-bottom: 2em !important;
-  font-weight: 400 !important;
-  opacity: 0.75 !important;
+  font-weight: 500 !important;
+  opacity: 0.85 !important;
 }
 .reading-body > p:first-of-type:has(> em:only-child) em { font-style: italic; }
 
@@ -217,13 +217,14 @@ section { padding: 4rem 0; border-bottom: 1px solid var(--border-light); }
 .chapter-title { font-family: 'EB Garamond', Georgia, serif; font-size: clamp(2rem,4vw,3.2rem); font-weight: 500; line-height: 1.15; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 0.6rem; }
 .chapter-subtitle {
   font-family: 'EB Garamond', Georgia, serif;
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-size: clamp(1.3rem, 2.5vw, 1.55rem);
   font-style: italic;
   color: var(--text-primary);
-  opacity: 0.75;
-  line-height: 1.55;
+  opacity: 0.85;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
   margin-bottom: 1.75rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 .chapter-meta-row { display: flex; align-items: center; gap: 2rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
 .meta-divider { width: 1px; height: 28px; background: var(--border); }
