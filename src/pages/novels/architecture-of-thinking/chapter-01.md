@@ -93,7 +93,7 @@ She nodded slowly.
 
 > Or perhaps we're calling signal noise because we don't yet know how to read it.
 
-After the meeting she reopened the data alone. Three medium-risk transactions appeared first. Then two weeks of inactivity. Another cluster — this time from a different geography. The velocity had shifted.
+After the meeting she reopened the data alone. Three medium-risk transactions appeared first. Then two weeks of inactivity. Another cluster — this time from a different geography. 
 
 > What unsettled her was not what the engine flagged. It was what it almost missed.
 
@@ -115,16 +115,16 @@ That night, the certainty broke.
 "And that's okay?"
 "Yes. But don't cry too much, okay?" Ananya gave her a hug and made her sleep back
 
-A long pause followed.
+Afer a long pause Mira murmured.
 
-"Okay," she said finally. "I will go. But I don't promise I'll like it."
+"Okay," "I will go. But I don't promise I'll like it."
 
 "That's fair."
 
 ## The Philosophy
 
 The next morning Ananya sat across from Rajiv, her shoulders tense.
-"Mira was so upset this week," she began. "She said the new school feels too big, that she doesn't know when to listen or when to write." Ananya shook her head, a worried furrow in her brow. 
+"Mira was so upset this week," she began. "She said the new school feels too big, I am just hoping and waiting she will settle into the rythm" Ananya shook her head, a worried furrow in her brow. 
 
 Rajiv listened quietly, his expression thoughtful. "Of course it is," he said gently. "It's a bigger world she's stepped into. But she'll learn the rhythm of it, just like we did."
 
