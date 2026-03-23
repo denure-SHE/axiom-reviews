@@ -67,7 +67,8 @@ The client's compliance head spoke quietly. "That changes containment posture. T
 
 * * *
 
-After the call, a message from Sales flashed on her screen: *"That landed well. But next time, we need to align before you say we absorb the cost."* Ananya read it, then set it aside. 
+>> After the call, a message from Sales flashed on her screen: "That landed well. But next time, we need to align before you say we absorb the cost." Ananya read it, then set it aside. 
+* * *
 
 ## Homecoming
 
