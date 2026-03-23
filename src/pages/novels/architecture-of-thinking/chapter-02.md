@@ -17,7 +17,8 @@ next:
 ---
 *The pilot began quietly*
 
-Nothing changed on the dashboard the next morning. The familiar grid of red and green markers appeared on the screen, reassuring in its routine. Around the table, the monthly rhythm continued exactly as it always had — alerts summarized, investigation counts reviewed, the system confirming once again that it understood the rules it had been built to enforce.
+Nothing changed on the dashboard in the coming weeks. The familiar grid of red and green markers appeared on the screen, reassuring in its routine. 
+Around the table, the monthly rhythm continued exactly as it always had — alerts summarized, investigation counts reviewed, the system confirming once again that it understood the rules it had been built to enforce.
 
 But Ananya knew something new had started. The existing engine continued doing its work, watching for events crossing the escalation threshold and reacting when the line was breached. Behind that familiar logic, almost invisibly, another model had begun observing the same transactions from a different angle.
 
