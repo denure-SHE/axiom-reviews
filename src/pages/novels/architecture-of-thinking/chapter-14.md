@@ -15,11 +15,10 @@ next:
   title: "Who Gets to Decide"
   url: "/novels/architecture-of-thinking/chapter-15"
 ---
-> What is done quietly becomes expected.
-> You don’t win office politics by fighting everyone — you win by not abandoning yourself.
+## What is done quietly becomes expected. You don’t win office politics by fighting everyone — you win by not abandoning yourself.
 
 
-The air in the meeting room felt thicker than usual, as if the combined weight of all the bodies and agendas had compressed the oxygen. Ananya settled into her chair, bracing herself for the presentation she knew was coming - the one that would feature her own work, transformed into executive-speak
+The air in the meeting room felt thicker than usual, as if the combined weight of all the bodies and agendas had compressed the oxygen. Ananya settled into her chair, bracing herself for the presentation she knew was coming - the one that would feature her own work, transformed into executive-speak !
 
 Halfway through the deck, the slide appeared.
 > ASD – Risk Behavior Indicators
@@ -38,8 +37,6 @@ A hand rose from the back. "How reliable is this?"
 By the time the slide moved on, someone summarized confidently, "Good. So we'll base early alerts on this moving forward." There it was: movement without definition. Ananya wrote one line in her notebook: 
 > "Add system conformance guardrails." Not defensive, but structural. If the narrative was going to expand, the architecture needed reinforcement.
 
-If the narrative was going to expand, the architecture needed reinforcement.
-
 
 Near the end, another slide appeared: 
 
@@ -47,7 +44,7 @@ Near the end, another slide appeared:
 
 The manager scrolled quickly. "We'll need representation from Engineering. Mostly walkthrough and confidence-building." Confidence-building, not design discussion or architecture defense. 
 
-Ananya had already decided she wouldn't go. Travel meant too many micro-adjustments - school pickups, classes rescheduling, home logistics for something framed as a walkthrough.
+Ananya had already decided she wouldn't go. Travel meant too many micro-adjustments - school pickups, classes rescheduling, home logistics for something framed as a walkthrough !
 
 “We’ll send whoever’s closest to implementation details,” he added.
 A few heads turned. Not directly at her. But near enough. She did not react.
