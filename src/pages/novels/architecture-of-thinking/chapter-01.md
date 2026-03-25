@@ -79,7 +79,7 @@ Ananya watched her walk inside — small but upright, excitement and hesitation 
 
 ## At the Office
 
-The financial risk engine had been running for eight years. Ananya had spent months watching it behave exactly as designed. The system was good at catching spikes. It had never been designed to see where they were heading.
+The financial risk engine had been running for eight years. As the Director heading Finance Risk Architecture , Ananya had spent months watching it behave exactly as designed. The system was good at catching spikes. It had never been designed to see where they were heading.
 
 "Another clean month," someone said as the dashboard glowed red and green.
 
