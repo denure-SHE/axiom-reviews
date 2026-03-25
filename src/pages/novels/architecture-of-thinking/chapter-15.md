@@ -18,7 +18,8 @@ next:
 ## Most problems aren’t difficult — they are undefined. Good leaders don’t control people — they remove ambiguity.
 
 The offsite first appeared as a calendar block — ordinary in format, heavy in implication.
-ASD Client Integration Workshop — ONSITE — 5 DAYS
+
+**ASD Client Integration Workshop — ONSITE — 5 DAYS**
 
 Five days ! Long enough to shape direction. Long enough to misalign it.
 
