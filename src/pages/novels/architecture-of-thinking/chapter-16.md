@@ -15,8 +15,7 @@ next:
   title: "What Moves Without Authority"
   url: "/novels/architecture-of-thinking/chapter-17"
 ---
-## Some leaders speak louder in chaos.
-## Others make the chaos speak less.
+## Some leaders speak louder in chaos, Others make the chaos speak less.
 
 The client office felt colder than necessary. Large screens lined the walls, dashboards updating in restless loops — numbers refreshing every few seconds as if motion itself could reassure anyone in the room. It didn't.
 Three teams sat around the same table yet spoke as if separated by invisible partitions. Sales searched for language that sounded confident. Compliance searched for language that sounded safe. Technology searched for time. The workshop had begun only fifteen minutes earlier, but it had already fractured into parallel conversations that carefully avoided intersecting.
